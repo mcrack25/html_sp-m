@@ -1,0 +1,1625 @@
+$font-pt: 'PT Sans', sans-serif;
+$font-ms: 'Museo Sans Cyrl', sans-serif;
+
+$text-color: #58616E
+$link-color: #008ED4
+
+$input-bg: #F3F1F6
+
+$color-blue: #0f80c2;
+$color-red: #ec4417;
+$color-green: #71a44c;
+
+$color-blue_h: darken($color-blue,10%);
+$color-red_h: darken($color-red,10%);
+$color-green_h: darken($color-green,10%);
+
+$orange-gradient_1: #fff9e7;
+$orange-gradient_2: #ffecbc;
+$orange-gradient_1-h: darken($orange-gradient_1, 10%);
+$orange-gradient_2-h: darken($orange-gradient_2, 10%);
+
+/* FIX для того, чтобы slick slider не размножался, внутри flexbox элементов */
+*
+  min-height: 0
+  min-width: 0
+  
+/* Цвета Элементов */
+.bg-blue
+  background: $color-blue
+.bg-red
+  background: $color-red
+.bg-green
+  background: $color-green
+
+/* Цвета Текстов */
+.c-blue
+  color: $color-blue
+  &:hover
+    color: $color-blue
+
+.c-red
+  color: $color-red
+  &:hover
+    color: $color-red
+
+.c-green
+  color: $color-green
+  &:hover
+    color: $color-green
+
+.c-blue,
+.c-red,
+.c-green
+  text-decoration: none
+  &:hover,
+  &:active
+    text-decoration: none
+
+.button
+  transition: all 0.3s ease
+  &_orange
+    background: linear-gradient(to bottom, $orange-gradient_1, $orange-gradient_2)
+    &:hover
+      background: linear-gradient(to bottom, $orange-gradient_1-h, $orange-gradient_2-h)
+
+.cat-btn
+  display: inline-block
+  border-radius: 100px
+  height: 25px
+  line-height: 25px
+  padding: 0 15px
+  font-size: 14px
+  transition: all 0.3s ease
+  font-weight: 900
+  border: none
+  color: #008ed4
+  background: #d5ebff
+  &:hover
+    text-decoration: none
+    border: none
+    background: #008ed4
+    color: #fff
+
+html
+  font-size: 10px
+
+body
+  font-family: $font-pt
+  font-weight: 400
+  font-size: 1.4rem
+  color: $text-color
+  line-height: 1.2
+  width: 100%
+  max-width: 100%
+  overflow-x: hidden
+  background: #d5eaf5 url("../img/bg.png") no-repeat top center
+
+.noscroll
+  overflow: hidden !important
+
+.wrapper
+  margin: 0 auto
+  background: #faf9eb
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.29)
+  max-width: 100%
+  overflow: hidden
+
+.content
+  padding: 0
+
+h1,h2,h3,h4,h5,h6
+  margin: 0
+  padding: 0
+  font-family: $font-ms
+  font-weight: 900
+
+h2
+  font-size: 2.4rem
+
+button
+  outline: none
+  font-family: $font-pt !important
+  &:active,
+  &:focus,
+  &:hover
+    outline: none
+    font-family: $font-pt
+
+input
+  font-family: $font-pt !important
+  &:active,
+  &:focus,
+  &:hover
+    font-family: $font-pt
+
+button
+  cursor: pointer
+  padding: 0
+
+ul,
+li
+  list-style: none
+  padding: 0
+  margin: 0
+
+@keyframes blink 
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    opacity: 0
+
+.breadcrumbs
+  font-size: 1.2rem
+  color: #9F8567
+  a
+    color: #9f8567
+    &:hover
+      color: darken(#9F8567, 20%)
+  &__list
+    display: flex
+    li
+      margin-right: 5px
+      &:last-child
+        margin-right: 0
+      &:after
+        content: "\f105"
+        font-family: FontAwesome
+        margin-left: 5px
+      &:last-child:after
+        display: none
+
+.checkbox
+  user-select: none
+  input[type=checkbox]
+    display: none
+  label
+    cursor: pointer
+    display: flex
+    align-items: center
+    &:before
+      content: ""
+      border-radius: 3px
+      border: 1px solid #b8b8b8
+      width: 12px
+      height: 12px
+      background: #f9f9f9
+      display: inline-block
+      vertical-align: middle
+      line-height: 10px
+      font-size: 10px
+      color: $color-green
+      font-weight: bold
+      text-align: center
+      margin-right: 8px
+  input[type=checkbox]:checked + label:before
+    content: "\2713"
+  &__round
+    border-radius: 100px
+    margin-right: 5px
+    display: inline-block
+    height: 16px
+    width: 16px
+    &_red
+      background: red
+    &_blue
+      background: blue
+    &_green
+      background: green
+    &_pink
+      background: #F99AD4
+    &_gray
+      background: #C1C1C1
+    &_white
+      background: #fff
+      border: 1px solid #CDCEC9
+
+.content
+  &__actions
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__body
+    margin-top: 25px
+  &__filters
+    margin-top: 30px
+    .filters
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+  &__footer
+    margin-top: 60px
+
+.round
+  display: inline-block
+  border-radius: 100px
+  padding: 2px 7px
+  font-weight: 700
+  font-style: normal
+  &:hover
+    text-decoration: none
+  &_brown
+    color: #5B4101
+    background: #E7E3D9
+  &_black
+    color: #3B4455
+    background: #E3E3DC
+  &_green
+    color: #0A7008
+    background: #DAEADA
+  &_red
+    color: #F00101
+    background: #F9D5CC
+
+.progress-bar
+  background: #ECEBEE
+  border-radius: 2px
+  height: 16px
+  line-height: 16px
+  width: 100%
+  position: relative
+  &__line
+    background: #AADE7D
+    border-radius: 2px
+    height: 100%
+    width: 0%
+    z-index: 1
+  &__text
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 2
+    color: #252525
+    font-size: 12px
+    text-align: center
+
+
+
+
+/* Components */
+
+.button
+  border-radius: 100px
+  padding: 5px 10px
+  transition: all 0.3s ease
+  text-decoration: none
+  &:hover
+    text-decoration: none
+  &_ghost
+    background: transparent
+    border: 1px solid
+    &-gray
+      @extend .button_ghost;
+      border-color: #dbdcdf
+      color: #57606f
+      &:hover
+        color: #34a8f9
+        border-color: #63c3fb
+
+.logo
+  display: flex
+  align-items: center
+  &__img-box
+    width: 85px
+  &__img
+    width: 100%
+  &__text
+    margin-left: 16px
+  &__title
+    font-size: 3.2rem
+    font-family: $font-ms
+    font-weight: 900
+  &__desc
+    margin-top: 2px
+    font-size: 1.4rem
+    color: #2670af
+    a
+      color: #2670af
+
+.search-form
+  border-radius: 100px
+  background: #fff
+  border: 3px solid #d1e9ff
+  padding: 7px 12px 7px 18px
+  display: flex
+  transition: all 0.3s ease
+  &_active
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.13)
+  &__input
+    border: none
+    outline: none
+    font-size: 16px
+    font-weight: 700
+    flex-basis: 100%
+  &__button
+    flex-basis: 30px
+    color: #0f80c2
+    background: transparent
+    border: none
+
+.user-sign
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-basis: 20%
+
+.user-box
+  display: flex
+  align-items: center
+  &__img-box
+    width: 49px
+    margin-right: 10px
+    background: #f1f0f3
+    border-radius: 3px
+    overflow: hidden
+  &__img
+    width: 100%
+  &__title
+    font-size: 1.4rem
+    font-weight: 700
+    color: #267fcc
+  &__money
+    margin-top: 5px
+    font-size: 1.2rem
+  &__id
+    font-size: 1.2rem
+    color: #c4c7ca
+
+.sign-in
+  font-size: 1.2rem
+  align-self: flex-end
+  &__link
+    color: #000
+    text-decoration: underline
+  &__icon
+    border-radius: 100px
+    background: #edf0f5
+    width: 16px
+    height: 16px
+    text-align: center
+    line-height: 16px
+
+.menu__sub
+  position: absolute
+  left: 0
+  bottom: 0
+  transform: translate(-1000%, 100%)
+  transition: opacity 0.3s ease
+  opacity: 0
+
+.menu
+  display: inline-block
+  font-family: $font-ms
+  font-weight: 700
+  font-size: 1.2rem
+  text-transform: uppercase
+  &__list
+    list-style: none
+    display: flex
+    li
+      margin-right: 30px
+      &:hover > .menu__sub
+        /*transform: translate(0%, 100%)*/
+        /*opacity: 1*/
+      &:last-child
+        margin-right: 0
+      a
+        color: #57606f
+        text-decoration: none
+        padding: 20px 0
+        &:hover
+          color: #000
+        i
+          margin-left: 5px
+
+.menu-popup
+  padding: 20px
+  background: #fff
+  width: 100%
+  min-height: 300px
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.29)
+  overflow: hidden
+  &__in
+    width: 100%
+    height: 100%
+    position: relative
+    display: flex
+    justify-content: space-between
+  &__list
+    height: 100%
+    list-style: none
+    padding: 0
+    margin: 0
+    flex-basis: 23%
+    flex-shrink: 0
+    padding-right: 40px
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 1.4rem
+    li
+      margin-right: 0
+      a
+        position: relative
+        color: #57606f
+        display: block
+        padding: 5px 15px
+        border-radius: 100px
+        &:hover,
+        &.maintainHover
+          text-decoration: none
+          background: #e6f3ff
+          color: #0f80c2
+          i
+            display: block
+        i
+          display: none
+          position: absolute
+          top: 50%
+          right: 10%
+          transform: translateY(-50%)
+  &__submenus
+    flex-basis: 80%
+  .popover
+    position: relative
+    padding: 10px 30px
+    width: 100%
+    max-width: 100%
+    border: none
+    &__menus
+      display: flex
+      justify-content: space-between
+    &-menu
+      flex-basis: 20
+      flex-shrink: 0
+
+.extra
+  display: inline-block
+  &__list
+    list-style: none
+    display: flex
+    li
+      margin-right: 7px
+      &:last-child
+        margin-right: 0
+
+.basket-btn
+  background: linear-gradient(to right, #f75245 0%,#ec6d35 18%,#ef9800 35%,#7fbf25 60%,#5f810a 87%,#2975ba 100%)
+  border-radius: 100px
+  padding: 1px
+  &__link
+    text-decoration: none !important
+    display: inline-block
+    background: #fff
+    border-radius: 100px
+    height: 24px
+    padding: 0px 12px
+    display: flex
+    align-items: center
+    transition: all 0.3s ease
+    &:hover
+      background: darken(#fff, 5%)
+  &__icon
+    margin-right: 5px
+    font-size: 14px
+    color: #ff5726
+  &__text
+    text-transform: uppercase
+    font-family: $font-ms
+    font-weight: 700
+    font-size: 12px
+    color: #000
+    margin-right: 5px
+  &__count
+    font-family: $font-ms
+    font-weight: 700
+    display: inline-block
+    height: 16px
+    width: 16px
+    line-height: 16px
+    text-align: center
+    font-size: 12px
+    color: #0f80c2
+    background: #d1e9ff
+    border-radius: 100px
+
+.info-btn
+  display: inline-block
+  border-radius: 100px
+  padding: 0px 5px 0px 10px
+  height: 26px
+  text-decoration: none !important
+  display: flex
+  justify-content: center
+  align-items: center
+  min-width: 50px
+  transition: all 0.3s ease
+  &_nopad
+    padding: 0px 5px 0px 5px
+  &__icon
+    font-size: 18px
+    display: inline-block
+    vertical-align: middle
+    margin-right: 4px
+  &__count
+    animation: blink 0.8s ease infinite
+    border-radius: 100px
+    display: inline-block
+    height: 16px
+    width: 16px
+    line-height: 16px
+    text-align: center
+    font-family: $font-ms
+    font-weight: 700
+    font-size: 12px
+    vertical-align: middle
+  &_sky
+    background: #e6f3ff
+    &:hover
+      background: lighten(#e6f3ff, 3%)
+    .info-btn__icon
+      color: #143f73
+    .info-btn__count
+      background: #fff
+      color: #ef5e1f
+  &_purple
+    background: #dfdaf0
+    &:hover
+      background: lighten(#dfdaf0, 3%)
+    .info-btn__icon
+      color: #5c5476
+    .info-btn__count
+      background: #fff
+      color: #ef5e1f
+  &_red
+    background: #efd8dc
+    &:hover
+      background: lighten(#efd8dc, 3%)
+    .info-btn__icon
+      color: #f27f9a
+    .info-btn__count
+      background: #fff
+      color: #ef5e1f
+      color: #ef5e1f
+  &_blue
+    background: #c9d8f0
+    &:hover
+      background: lighten(#c9d8f0, 3%)
+    .info-btn__icon
+      color: #8fa5c9
+    .info-btn__count
+      background: #fff
+      color: #ef5e1f
+  &_orange
+    background: #fce5df
+    &:hover
+      background: lighten(#fce5df, 3%)
+    .info-btn__icon
+      color: #ea8666
+    .info-btn__count
+      background: #fce5df
+      color: #fff
+
+.menu-btn
+  font-size: 25px
+  &__link
+    color: #57606f
+    &:hover
+      color: #57606f
+
+.sliders
+  padding: 25px 0px
+  display: flex
+  &__left
+    width: 76%
+  &__right
+    width: 24.9%
+
+.main-slider
+  margin-right: 30px
+  &__img
+    width: 100%
+
+.item-slider
+  &__item
+    height: 55px
+    line-height: 55px
+    padding: 0 28px
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 16px
+    cursor: pointer
+    background: #ebeef2
+    transition: all 0.3s ease
+    &:hover
+      background: lighten(#ebeef2, 5%)
+
+  .slick-current
+    .item-slider__item
+      border: 1px solid #267fcc
+      border-radius: 3px
+      background: #fff
+
+.categories
+  font-size: 1.4rem
+  &__list
+    list-style: none
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    li
+      margin-bottom: 10px
+      a
+        color: #57606f
+        border-radius: 100px
+        display: inline-block
+        padding: 6px 9px
+        background: #e6f3ff
+        transition: all 0.3s ease
+        &:hover
+          background: darken(#e6f3ff, 5%)
+          text-decoration: none
+
+.good
+  display: block
+  margin: 0 auto
+  &__more
+    font-size: 1.4rem
+    font-weight: 700
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 3px solid
+    padding-bottom: 7px
+    &:hover
+      text-decoration: none
+  &__title
+    color: #000
+  &__body
+    margin-top: 20px
+  &_red
+    .good__head,
+    .good__more,
+    .prices
+      color: $color-red
+    .card-one,
+    .card-two
+      &:hover
+        border-color: $color-red
+  &_green
+    .good__head,
+    .good__more,
+    .prices
+      color: $color-green
+    .card-one,
+    .card-two
+      &:hover
+        border-color: $color-green
+  &_blue
+    .good__head,
+    .good__more,
+    .prices
+      color: $color-blue
+    .card-one,
+    .card-two
+      &:hover
+        border-color: $color-blue
+
+.good-cards__1
+  display: grid
+  grid-column-gap: 15px
+  grid-row-gap: 15px
+  grid-template-rows: repeat(2, 200px)
+  grid-template-areas: "card-two card-two" "card-one_1 card-one_2"
+
+.good-cards__2
+  display: grid
+  grid-column-gap: 15px
+  grid-row-gap: 15px
+  grid-template-rows: repeat(2, 200px)
+  grid-template-areas: "card-one_1 card-one_2" "card-one_3 card-one_4"
+
+.good-cards__3
+  display: grid
+  grid-column-gap: 15px
+  grid-row-gap: 15px
+  grid-template-rows: repeat(2, 200px)
+  grid-template-areas: "card-one_1 card-one_2" "card-two card-two"
+
+.card-two
+  grid-area: card-two
+
+.card-one_1
+  grid-area: card-one_1
+
+.card-one_2
+  grid-area: card-one_2
+
+.card-one_3
+  grid-area: card-one_3
+
+.card-one_4
+  grid-area: card-one_4
+
+.card-two
+  height: 200px
+  background: #fff
+  display: flex
+  border: 1px solid #dcdbd0
+  transition: all 0.3s ease
+  &__img-box
+    display: block
+    overflow: hidden
+    flex-basis: 50%
+  &__text-box
+    flex-basis: 50%
+    display: flex
+    justify-content: space-around
+    align-items: center
+    text-align: center
+    flex-direction: column
+  &__title
+    font-weight: 700
+    font-size: 1.4rem
+    &:hover
+      text-decoration: none
+
+.prices
+  font-family: $font-ms
+  font-weight: 900
+  font-size: 2.4rem
+  &__old
+    position: relative
+    color: #d5c8c0
+    &:after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      display: block
+      height: 2px
+      width: 90%
+      background: #d5c8c0
+      transform: rotate(-15deg)
+
+.card-one
+  transition: all 0.3s ease
+  background: #fff
+  padding: 12px 10px 20px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  text-align: center
+  border: 1px solid #dcdbd0
+  &__img-box
+    display: block
+    width: 120px
+    height: 120px
+    margin: 0 auto
+  &__img
+    min-width: 100%
+    min-height: 100%
+  &__text-box
+    margin-top: 10px
+  &__title
+    color: #2670af
+    font-size: 1.4rem
+  .prices
+    margin-top: 5px
+    font-size: 1.6rem
+
+/* catalog */
+
+.catalog
+  margin-top: 90px
+  &__body
+    margin-top: 20px
+  .line
+    margin-top: 180px
+
+.card-one-c
+  background: #fff
+  padding: 9px
+  border: 1px solid #c3c3ba
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  &__img-box
+    display: block
+    width: 100%
+    height: 100%
+    position: relative
+    flex-basis: auto
+    overflow: hidden
+  &__img
+    min-height: 100%
+    min-width: 100%
+  &__body
+    padding-top: 5px
+    flex-basis: 70px
+    flex-shrink: 0
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+  &__name
+    font-size: 1.4rem
+    color: $text-color
+  &__buy
+    margin-top: 10px
+    display: flex
+    justify-content: space-between
+    font-family: $font-ms
+    font-weight: 900
+    align-items: center
+  &__price
+    font-size: 1.6rem
+
+.card-one-c__left
+  grid-area: card-one-c__left
+
+.card-one-c__right
+  grid-area: card-one-c__right
+
+.card-one-c__min-1
+  grid-area: card-one-c__min-1
+
+.card-one-c__min-2
+  grid-area: card-one-c__min-2
+
+.card-one-c__form
+  grid-area: card-one-c__form
+
+.card-one-c__min-4
+  grid-area: card-one-c__min-4
+
+.products
+  display: grid;  
+  grid-template-areas: "card-one-c__left card-one-c__min-1 card-one-c__min-2 card-one-c__right" "card-one-c__left card-one-c__form card-one-c__min-4 card-one-c__right"
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-rows: repeat(2, 250px)
+  grid-template-columns: 2fr 1fr 1fr 1fr
+
+.mini-form
+  background: #008ed4
+  color: #fff
+  padding: 20px 15px
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  &__title
+    text-transform: uppercase
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 2rem
+    line-height: 1.2em
+  &__form
+    margin-top: 20px
+    text-align: center
+  &__input
+    display: block
+    width: 100%
+    background: #f1f1f1
+    border: none
+    outline: none
+    padding: 10px 5px
+  &__button
+    display: inline-block
+    margin-top: 25px
+    border: 1px solid
+    color: #fff
+    background: transparent
+    border-radius: 100px
+    cursor: pointer
+    padding: 4px 20px 5px
+    transition: all 0.3s ease
+    &:hover
+      border: 1px solid
+      background: #ffffff
+      color: #008ed4
+
+
+.comments
+  margin-top: 90px
+  &__body
+    margin-top: 20px
+
+.stars
+  list-style: none
+  display: flex
+  li
+    height: 14px
+    width: 14px
+    margin-right: 3px
+    background: url("../img/star_off.svg") no-repeat center center
+    background-size: cover
+    cursor: pointer
+    &.active
+      background: url("../img/star_on.svg") no-repeat center center
+      background-size: cover
+  &_disabled
+    li
+      cursor: inherit
+  &_sm
+    li
+      height: 12px
+      width: 12px
+      margin-right: 1px
+
+.comment
+  &__img-box
+    width: 100%
+    height: 160px
+  &__img-product
+    min-width: 100%
+    min-height: 100%
+  &__title
+    margin-top: 15px
+    font-size: 1.7rem
+    height: 5rem
+  &__rating
+    margin-top: 10px
+    display: flex
+    align-items: center
+  .stars
+    margin-right: 10px
+
+  &__click
+    font-size: 1.2rem
+    color: #0897dc
+  &__author
+    margin-top: 25px
+    display: flex
+    align-items: center
+    &-img
+      width: 25px
+      height: 25px
+      border-radius: 100px
+      margin-right: 7px
+    &-name
+      font-family: $font-ms
+      font-weight: 900
+      color: #9f8567
+  &__text
+    color: $text-color
+    font-size: 1.4rem
+    margin-top: 10px
+    background: #fff
+    padding: 30px 10px
+    border: 1px solid #e5e5dc
+    line-height: 1.4em
+    position: relative
+    &::after,
+    &::before
+      content: ''
+      position: absolute
+      background: #fff
+      left: 30px
+      width: 15px
+      height: 15px
+      box-shadow: 0 0 1px 1px #e5e5dc
+      z-index: 0
+      transform: rotate(45deg)
+    &::before
+      z-index: 1
+      box-shadow: none
+      top: 0px
+      left: 0
+      transform: rotate(0deg)
+      width: 100%
+      height: 20px
+    &:after
+      top: -5px
+  &__all
+    font-size: 1.2rem
+    color: #0897dc
+    text-decoration: underline
+    padding-bottom: 3px
+
+
+.subscribe
+  text-align: center
+  height: 100%
+  padding: 30px 16px
+  background: url(../img/border-l.png) repeat-y left top/5px, url(../img/border-r.png) repeat-y right top/5px, url(../img/border-t.png) repeat-x left top/65px, #fff url(../img/border-b.png) repeat-x left bottom / 65px
+  &__img
+    width: 54px
+  &__title
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 2.6rem
+    color: #008ed4
+    margin-top: 20px
+  &__form
+    margin-top: 30px
+  &__input
+    background: #f6f6f6
+    display: block
+    width: 100%
+    border: none
+    padding: 12px 15px 14px
+    font-size: 1.4rem
+  &__button
+    border: none
+    outline: none
+    color: #978774
+    font-family: $font-ms
+    font-weight: 700
+    font-size: 1.6rem
+    padding: 14px 34px
+    border-radius: 100px
+    box-shadow: 0px 1px 1px 1px #d2c3b3
+    margin-top: 30px
+    cursor: pointer
+  &__policy
+    margin-top: 60px
+    display: block
+    color: #919cad
+    text-decoration: underline
+
+
+.buying
+  margin-top: 85px
+  margin-bottom: 100px
+  &__band
+    margin: 0 0 0 -10px
+    position: relative
+    &:before
+      content: ""
+      position: absolute
+      height: 0
+      width: 0
+      bottom: -10px
+      left: 0
+  &__style
+    padding: 10px 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    overflow: hidden
+    color: #fff
+    &:after
+      content: ''
+      position: absolute
+      background: #fff
+      height: 100%
+      width: 60%
+      left: 50%
+      opacity: 0.5
+      transform: skewX(70deg)
+      z-index: 1
+  &__title
+    a
+      text-decoration: none
+      color: #fff
+  &__all
+    position: relative
+    z-index: 2
+    height: 29px
+    line-height: 29px
+    padding: 0 15px
+    border-radius: 100px
+    font-size: 14px
+    color: #3b4455
+    transition: all 0.3s ease
+    &:hover
+      text-decoration: none
+      color: #3b4455
+    &-bottom
+      margin: 0 auto
+      margin-top: 20px
+      display: none
+  &__body
+    padding: 15px 0 18px
+  &__price
+    font-size: 2.4rem
+  &__button
+    margin-top: 5px
+    display: inline-block
+    border-radius: 100px
+    height: 25px
+    line-height: 25px
+    padding: 0 15px
+    font-size: 14px
+    transition: all 0.3s ease
+    font-weight: 900
+    &:hover
+      text-decoration: none
+  &__cards
+    display: grid
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-rows: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr)
+    height: 100%
+
+
+
+
+.buying_red
+  .buying
+    &__band
+      background: $color-red
+      &:before     
+        border-top: 10px solid darken($color-red, 10%)
+        border-left: 10px solid transparent
+    &__body
+      background: #fce3d1
+    &__all
+      background: #fbdcc9
+      &:hover
+        background: darken(#fbdcc9, 5%)
+    &__price
+      color: $color-red
+  .cat-btn
+    color: #fff
+    background: $color-red
+    &:hover
+      color: #000
+      background: #ffbb8a
+  .buy-big,
+  .buy-min
+    transition: all 0.3s ease
+    &:hover
+      border-color: #ee5229
+
+
+.buying_green
+  .buying
+    &__band
+      background: $color-green
+      &:before     
+        border-top: 10px solid darken($color-green, 10%)
+        border-left: 10px solid transparent
+    &__body
+      background: #ebf2e6
+    &__all
+      background: #ebf2e6
+      &:hover
+        background: darken(#ebf2e6, 5%)
+    &__price
+      color: $color-green
+  .cat-btn
+    color: #fff
+    background: $color-green
+    &:hover
+      color: #000
+      background: #bcd4ab
+  .buy-big,
+  .buy-min
+    transition: all 0.3s ease
+    &:hover
+      border-color: #71a44c
+
+.buying_blue
+  .buying
+    &__band
+      background: $color-blue
+      &:before     
+        border-top: 10px solid darken($color-blue, 10%)
+        border-left: 10px solid transparent
+    &__body
+      background: #e9f4f9
+    &__all
+      background: #dfeef6
+      &:hover
+        background: darken(#dfeef6, 5%)
+    &__price
+      color: $color-blue
+  .cat-btn
+    color: #fff
+    background: $color-blue
+    &:hover
+      color: #000
+      background: #add4ea
+  .buy-big,
+  .buy-min
+    transition: all 0.3s ease
+    &:hover
+      border-color: #0f80c2
+
+.buy-big
+  position: relative
+  background: #fff
+  padding: 15px 10px 25px
+  border: 1px solid #ddd1c4
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  &__maker
+    position: absolute
+    top: 10px
+    left: 10px
+  &__text-box
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-family: $font-ms
+    font-weight: 900
+    margin-top: 10px
+  &__title
+    color: #2670af
+    font-family: $font-pt
+    font-weight: 700
+  &__img-box
+    display: block
+    width: 100%
+    height: 100%
+  &__img
+    min-width: 100%
+    min-height: 100%
+  .cat-btn
+    margin-top: 10px
+
+.buy-min
+  background: #fff
+  padding: 10px
+  border: 1px solid #ddd1c4
+  text-align: center
+  &__img-box
+    display: block
+    margin: 0 auto
+    width: 120px
+    height: 120px
+    overflow: hidden
+  &__img
+    min-width: 100%
+    min-height: 100%
+  &__title
+    display: block
+    font-size: 1.4rem
+    color: #2670af
+    margin-top: 8px
+  &__maker
+    margin-top: 5px
+    display: inline-block
+  &__info
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 10px
+  &__price
+    font-weight: 900
+    font-size: 1.6rem
+
+.f-logo
+  display: flex
+  align-items: center
+  &__img-box
+    width: 56px
+  &__img
+    width: 100%
+  &__text
+    max-width: 215px
+    margin-left: 20px
+  &__title
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 1.8rem
+  &__desc
+    margin-top: 10px
+    font-size: 1.4rem
+    color: #267fcc
+
+.copy
+  display: block
+  font-size: 1.2rem
+  max-width: 190px
+
+.develop-info
+  font-size: 1.2rem
+  &__link
+    color: #267fcc
+
+.site-info
+  font-size: 1.2rem
+  max-width: 330px
+
+.support-info
+  .fa
+    margin-right: 5px
+  .fa-skype
+    font-size: 22px
+    color: #00b5eb
+  &__link
+    color: #00b5eb
+
+.header
+  position: relative
+
+.popover-menu
+  li
+    display: block
+  &__title
+    font-size: 1.6rem
+    font-weight: 700
+    img
+      height: 34px
+      margin-right: 10px
+  &__list
+    margin-top: 15px
+    font-size: 1.4rem
+    li
+      margin-bottom: 5px
+      &:last-child
+        margin-bottom: 0
+    a
+      padding: 0 !important
+      transition: all 0.3s ease
+      color: #57606f
+      &:hover
+        color: #0f80c2
+
+.gamburg-menu
+  background: linear-gradient(to right, #eff6fd 0%, #fff 40%, #fff 100%)
+  position: absolute
+  bottom: 0
+  right: 0
+  z-index: 10
+  min-height: 300px
+  min-width: 90%
+  transform: translateY(100%) scale(0)
+  transform-origin: 100% 0%
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.29)
+  overflow: hidden
+  padding: 20px 30px 40px
+  transition: all 0.3s ease
+  display: flex
+  justify-content: space-between
+  &_active
+    transform: translateY(100%) scale(1)
+  &__left
+    flex-basis: 100%
+  &__right
+    flex-basis: 250px
+    flex-shrink: 0
+  &__title
+    font-family: $font-ms
+    font-size: 2.4rem
+    font-weight: 900
+
+  &__socials
+    ul,
+    li
+      list-style: none
+      padding: 0
+      margin: 0
+    ul
+      display: flex
+      justify-content: center
+      li
+        margin-right: 7px
+        &:last-child
+          margin-right: 0
+        a
+          background: #eceff4
+          color: #57606f
+          display: block
+          height: 30px
+          width: 30px
+          line-height: 30px
+          font-size: 14px
+          text-align: center
+          border-radius: 100px
+          &:hover
+            color: #57606f
+
+  &__submenus
+    margin-top: 30px
+    .popover
+      position: relative
+      min-width: 100%
+      background: transparent
+      border: none
+  .gamburg-menu__submenu-box
+    display: flex
+    justify-content: space-around
+
+.gamburg-main-menu
+  margin-top: 20px
+  ul,
+  li
+    list-style: none
+    padding: 0
+    margin: 0
+  ul
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 1.6rem
+  li
+    margin-bottom: 5px
+    &:last-child
+      margin-bottom: 0
+  a
+    color: #000
+    &:hover
+      text-decoration: none
+      color: #000
+  img
+    width: 27px
+    margin-right: 5px
+
+.gamburg-right-menu
+  margin-top: 20px
+  font-family: $font-ms
+  font-weight: 900
+  font-size: 1.6rem
+  ul,
+  li
+    list-style: none
+    padding: 0
+    margin: 0
+  a
+    color: #57606f
+    display: block
+    padding: 10px 20px
+    border-radius: 100px
+    transition: all 0.1s ease
+    &:hover,
+    &.maintainHover
+      color: #fff
+      background: #0f80c2
+      text-decoration: none
+      i
+        opacity: 1
+    i
+      opacity: 0
+      font-size: 18px
+      margin-right: 5px
+
+.gamburg-menu-submenu
+  max-width: 300px
+  ul,
+  li
+    list-style: none
+    padding: 0
+    margin: 0
+  a
+    display: block
+    font-family: $font-ms
+    font-weight: 700
+    font-size: 1.6rem
+    color: #57606f
+    text-decoration: none !important
+    padding: 15px 50px
+    transition: all 0.2s ease
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      display: block
+      height: 1px
+      width: 85%
+      background: #eaf2f8
+    &:hover
+      border-radius: 100px
+      background: #e6f3ff
+  li
+    &:last-child
+      a
+        &:after
+          display: none
+
+
+.mobile-menu
+  background: #dfedf8
+  z-index: 200
+  position: fixed
+  top: 0
+  right: 0
+  width: 75%
+  height: 100vh
+  padding: 20px 20px 20px 30px
+  box-shadow: -1px 0px 21px 0px rgba(115, 129, 149, 0.74)
+  transform: translateX(120%)
+  transition: all 0.3s ease
+  &__close-box
+    text-align: right
+  &__close
+    display: inline-block
+    cursor: pointer
+  &__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__avatar-box
+    display: block
+    width: 40px
+    height: 40px
+    background: #c1c8e2
+    border-radius: 5px
+  &__avatar
+    width: 100%
+  &_active
+    transform: translateX(0)
+  &__body
+    margin-top: 4vh
+  &__list
+    padding: 0
+    margin: 0
+    list-style: none
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 1.8rem
+    li
+      border-bottom: 1px solid #c5d3de
+      &:last-child
+        border-bottom: none
+      a
+        display: block
+        color: #565f70
+        padding: 10px 15px
+        &:hover
+          background: #e6f3ff
+          text-decoration: none
+  &__footer
+    margin-top: 4vh
+  &__button
+    background: transparent
+    border: 1px solid #8c98a4
+    border-radius: 100px
+    font-size: 16px
+    padding: 10px 20px
+    font-family: $font-ms
+    font-weight: 900
+    text-transform: uppercase
+    transition: all 0.3s ease
+    &:hover
+      color: #fff
+      background: #8c98a4
+      border: 1px solid #8c98a4
+
+
+
+.overlay
+  display: block
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 100
+  height: 100%
+  width: 0
+  background: #000000
+  opacity: 0.3
+  &_active
+    width: 100%
+
+.go-up
+  position: fixed
+  z-index: 10
+  bottom: 40px
+  right: 40px
+  text-align: center
+  &__img
+    width: 80px
+
+.my-mark
+  border-radius: 100px
+  padding: 5px 15px
+  font-size: 14px
+  color: #fff
+  &_20
+    font-size: 12px
+    padding: 3px 10px
+  &_red
+    background: #D93838
+  &_red-lite
+    background: #FF3300
+  &_blue
+    background: #2201CD
+  &_purple
+    background: #9E02D2
+  &_green
+    background: #4AA501
+  &_green-lite
+    background: #66E103
+  &_orange
+    background: #EBA000

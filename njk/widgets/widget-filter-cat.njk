@@ -1,0 +1,23 @@
+{% macro widget_filter_cat(title) %}
+  <div class="widget widget-filter-cat">
+    <div class="widget__title">
+      {{ title }}
+    </div>
+    <div class="widget__body">
+
+      <div class="input-group input-block input-block_blue">
+        <select class="form-control chosen-select" data-placeholder="Выберите параметры" multiple tabindex="3">
+          <option value=""></option> 
+          <option value="United States">United States</option>
+          <option value="United Kingdom">United Kingdom</option>
+        </select>
+        <div class="input-group-prepend">
+          <button class="input-block__button">
+            <i class="fa fa-filter" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endmacro %}

@@ -1,0 +1,636 @@
+.p-catalog
+  &__content
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+  &__left
+    flex-basis: 70%
+    background: #fff
+    border: 1px solid #F1F0DE
+  &__right
+    flex-basis: 28%
+  .news-box
+    margin-bottom: 20px
+  .info-block
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+
+.info-block
+  padding: 10px
+  &__title
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    padding-bottom: 8px
+    &:after
+      content: ''
+      display: block
+      width: 100%
+      height: 4px
+      position: absolute
+      bottom: 0
+      left: 0
+    &-text
+      font-size: 2.2rem
+      font-family: $font-ms
+      font-weight: 900
+      color: #000
+    &-date
+      font-size: 1.2rem
+      font-style: italic
+      color: #A8ABB0
+    &_red
+      &:after
+        background: linear-gradient(45deg, #ec4417 0%,#ec4417 45%,#f49278 46%,#f49278 100%)
+    &_blue
+      &:after
+        background: linear-gradient(45deg, #0f80c2 0%,#0f80c2 45%,#66add1 46%,#66add1 100%)
+  &__body
+    margin-top: 10px
+
+  &__files
+    ul
+      display: flex
+      justify-content: flex-end
+    li
+      max-width: 165px
+      margin-left: 30px
+      &:first-child
+        margin-left: 0
+      a
+        display: flex
+        span
+          word-break: break-word
+    img
+      flex-shrink: 0
+      margin-right: 5px
+      width: 26px
+      height: 36px
+  &__container
+    display: flex
+    justify-content: space-between
+    .info-block__infos
+      flex-basis: 70%
+  &__infos
+    ul
+      li
+        background: url('../img/ico_info.svg') no-repeat top left
+        background-size: 16px 16px
+        padding-left: 25px
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
+  &__buttons
+    ul
+      li
+        margin-bottom: 20px
+        &:last-child
+          margin-bottom: 0
+        .simple-button
+          display: block
+
+.info-block_accordion
+  margin-top: 10px
+  padding: 0
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3)
+
+  .info-block
+    &__title
+      cursor: pointer
+      background: #fff
+      border: none
+      padding: 10px 10px
+      position: relative
+      outline: none
+      &:after
+        display: none
+    &__title-text
+      font-weight: 500
+      font-size: 1.4rem
+    &__title-date
+      display: none
+    &__body
+      margin: 0
+      border-top: 1px solid rgb(214, 214, 214)
+
+  .iconClosed,
+  .iconOpen
+    display: block
+    background-image:url('../img/fillable_round_right.svg') !important
+    background-size: 28px
+    width: 28px
+    height: 28px
+    transition: all 0.3s ease
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 10px
+    margin: 0
+  .iconOpen
+    transform: translateY(-50%) rotate(90deg)
+
+
+
+.news-box
+  position: relative
+  width: 100%
+  min-height: 168px
+  padding: 0
+  border: 1px solid #F3E3E1
+  &__title
+    position: absolute
+    top: 22px
+    left: 180px
+    z-index: 3
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 22px
+    color: #000
+
+  &__slider-box
+    position: relative
+
+  &-slider
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    width: 522px
+    height: 168px
+    &__dots
+      position: absolute
+      z-index: 3
+      top: 140px
+      left: 200px
+      transform: translateX(-50%)
+      ul
+        display: flex
+        li
+          margin-right: 9px
+          &:last-child
+            margin-right: 0
+          button
+            border: 1px solid #AEA9A3
+            background: #fff
+            border-radius: 100px
+            height: 12px
+            width: 12px
+            font-size: 1px
+            color: transparent
+        .slick-active
+          button
+            border-color: #3B4455
+            background: #3B4455
+
+  &-text
+    position: relative
+    z-index: 2
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 100%)
+    width: 100%
+    min-height: 168px
+    padding: 25px 10px
+    padding-left: 38%
+    display: flex
+    &__dates
+      display: flex
+      flex-shrink: 0
+      flex-direction: column
+      font-size: 14px
+      li
+        margin-bottom: 10px
+        a
+          color: $text-color
+        &:last-child
+          margin-bottom: 0
+        .news-box-text__dates-title
+          color: #424242
+          font-size: 14px
+          a
+            color: #424242
+        .news-box-text__dates-desc
+          font-size: 12px
+          color: #C4C4C4
+          a
+            color: #C4C4C4
+        &:first-child
+          .news-box-text__dates-title
+            font-weight: 700
+        &:last-child
+          .news-box-text__dates-title
+            color: #C4C4C4
+            a
+              color: #C4C4C4
+    &__news
+      margin-left: 15px
+      font-size: 14px
+      &-title
+        color: #424242
+        font-weight: 700
+        margin-bottom: 15px
+        a
+          color: #424242
+      ul
+        li
+          color: $text-color
+          margin-bottom: 10px
+          a
+            color: $text-color
+          &:last-child
+            color: #C4C4C4
+            a
+              color: #C4C4C4
+
+
+/* Информация о каталоге */
+.one-catalog-info
+  margin: 0 auto
+  position: relative
+  display: flex
+  &__right
+    transition: all 0.3s ease
+  &__img-content
+    position: relative
+    overflow: hidden
+    max-width: 320px
+    height: 216px
+    flex-shrink: 0
+    .stars
+      position: absolute
+      left: 16px
+      top: 12px
+      li
+        cursor: inherit
+    .my-mark
+      position: absolute
+      top: 12px
+      right: 12px
+  &__img-box
+    position: relative
+    display: block
+    width: 100%
+    height: 100%
+    &:before
+      content: ""
+      position: absolute
+      z-index: 0
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(to bottom, rgba(0,0,0,0.73) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.73) 100%)
+  &__img
+    width: 100%
+    height: 100%
+  &__img-bottom
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    padding: 10px 12px
+  &__heading
+    color: #fff
+    text-decoration-color: #fff !important
+    display: inline-block
+  &__title
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 1.8rtem
+    color: #fff
+    a
+      color: #fff
+    img
+      width: 20px
+      margin-left: 16px
+  &__desc
+    margin-top: 10px
+    font-size: 1.4rem
+    color: #fff
+    a
+      color: #fff
+  &__round_right
+    position: absolute
+    right: 15px
+    bottom: 30px
+    opacity: 0
+    transition: all 0.3s ease
+    svg
+        width: 48px
+        height: 48px
+        fill: #fff
+        transition: all 0.3s ease
+        &:hover
+            fill: darken(#fff, 15%)
+  &__text-content
+    display: flex
+    flex-direction: column
+  &__author-box
+    display: flex
+    justify-content: space-between
+  &__author
+    display: flex
+    &:hover
+      text-decoration: none
+  &__avatar
+    height: 40px
+    width: 40px
+    position: relative
+    &-img
+      width: 100%
+  &__badge-img
+    position: absolute
+    bottom: -5px
+    right: -5px
+    display: block
+    height: 20px
+    width: 20px
+  &__info
+    margin-left: 16px
+  &__name
+    font-family: $font-ms
+    font-size: 1.8rem
+    font-weight: 700
+    color: #57606F
+  &__rating
+    margin-top: 4px
+    font-style: italic
+    font-size: 1.2rem
+    color: #A8ABB0
+    &-round
+      margin: 0 5px
+      border-radius: 100px
+  &__info-top
+    font-size: 1.4rem
+    ul
+      line-height: 1.3em
+    .round
+      font-size: 1.2rem
+  &__icon
+    img
+      width: 18px
+  &__progress-bar
+    margin-top: 12px
+  &__right
+    padding: 12px 12px 12px 25px
+    width: 100%
+    display: flex
+    justify-content: space-between
+  &__info-in
+    margin-left: 4px
+  &__info-top
+    margin-top: 10px
+  &__buttons
+    margin-top: 20px
+    ul
+      display: flex
+      justify-content: space-between
+      li
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+  &__info-top
+    display: flex
+    justify-content: space-between
+    align-items: center        
+  &__info-messages
+    display: none
+    width: 48px
+    height: 48px
+    margin-right: 15px
+    img
+      width: 100%
+
+  &__checks-2
+    font-size: 1.2rem
+    text-align: right
+    line-height: 1.5em
+    position: relative
+    display: none
+    ul
+      li
+        &:last-child
+          margin-right: 20px
+  &__riad
+    content: ''
+    position: absolute
+    bottom: 0
+    right: 0
+
+/* Блок Условия закупки */
+.condition-buy
+  background: #fff
+  border: 1px solid #F1F0DE
+  padding: 15px 10px 25px
+  &__main-title
+    font-size: 2.2rem
+    font-family: $font-ms
+    font-weight: 900
+    text-align: center
+    &:after
+      content: ''
+      display: block
+      width: 100%
+      height: 4px
+      background: linear-gradient(45deg, #71a44c 0%,#71a44c 50%,#a4c387 51%,#a4c387 100%)
+      margin-top: 10px
+  &__list
+    margin-top: 18px
+    padding: 0 10px
+    ul
+      .condition-buy
+          &__item
+            margin-bottom: 15px
+            display: flex
+            color: $text-color
+            &:last-child
+              margin-bottom: 0
+            &_green
+              color: #000
+              .icon
+                fill: #3DA648
+            &_pink
+              color: #000
+              .icon
+                fill: #FB73D5
+            &_blue
+              color: #000
+              .icon
+                fill: #008ED4
+  &__icon
+    display: flex
+    flex-basis: 28px
+    flex-shrink: 0
+    justify-content: space-between
+    .icon
+      fill: $text-color
+      transition: all 0.3s ease
+
+  &__title
+    font-size: 1.4rem
+  &__text
+    margin-top: 3px
+    font-size: 1.2rem
+
+.condition-buy_accordion
+  padding: 0
+  border: none
+  background: #fff
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3)
+  .condition-buy
+    &__main-title
+      background: transparent
+      padding: 10px
+      text-align: left
+      font-weight: 500
+      font-size: 1.4rem
+      color: #000
+      border: none
+      outline: none
+      &:after
+        display: none
+    &__list
+      border: none
+      margin: 0
+      border-top: 1px solid rgb(214, 214, 214)
+
+  .iconClosed,
+  .iconOpen
+    display: block
+    background-image:url('../img/fillable_round_right.svg') !important
+    background-size: 28px
+    width: 28px
+    height: 28px
+    transition: all 0.3s ease
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 10px
+    margin: 0
+  .iconOpen
+    transform: translateY(-50%) rotate(90deg)
+
+.news-box-accordion
+  margin-top: 10px
+  display: none
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3)
+  &__title
+    color: transparent
+    background: url('../img/news-box-bg.jpg') no-repeat center center
+    background-size: cover
+    padding: 10px
+    text-align: left
+    font-weight: 500
+    font-size: 1.4rem
+    border: none
+    outline: none
+  &__article
+    margin-bottom: 10px
+    display: inline-block
+    &:last-child
+      margin-bottom: 0
+
+  .iconClosed,
+  .iconOpen
+    display: block
+    background-image:url('../img/fillable_round_right.svg') !important
+    background-size: 28px
+    width: 28px
+    height: 28px
+    transition: all 0.3s ease
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 10px
+    margin: 0
+  .iconOpen
+    transform: translateY(-50%) rotate(90deg)
+
+@media (max-width: 1340.999px)
+  .p-catalog
+    .news-box
+      &__title
+        left: 20px
+        font-size: 20px
+      &-text
+        padding: 20px 10px
+        padding-left: 25%
+
+@media (max-width: 1200.999px)
+  .p-catalog
+    .one-catalog-info
+      display: flex
+      flex-direction: column
+      &__img-content
+        max-width: 100%
+      &__right
+        padding: 12px
+      &__text-content
+        width: 100%
+    .info-block
+      &__container
+        display: flex
+        flex-direction: column
+      &__files
+        ul
+          display: flex
+          justify-content: center
+      &__buttons
+        ul
+          li
+            margin-bottom: 10px
+
+    .news-box
+      &__title
+        left: 10px
+        font-size: 16px
+      &-text
+        padding: 10px
+        padding-left: 25%
+
+@media (max-width: 768.999px)
+  .p-pages
+    &__title_two
+      margin-top: 10px
+
+  .p-catalog
+    &__content
+      display: flex
+      flex-direction: column
+      background: transparent
+    &__left
+      border: none
+    &__right
+      margin-top: 10px
+    .one-catalog-info
+      background: #fff
+      border: 1px solid #F1F0DE
+
+    .one-catalog-info
+      &__round_right
+        opacity: 1
+      &__text-content
+        display: flex
+        flex-direction: column
+      &__author-box
+        order: 2
+        margin-top: 10px
+      &__info-top
+        margin-top: 0
+      &__buttons
+        order: 3
+      &__checks-2
+        display: block
+      &__info-messages
+        display: block
+      &__buttons
+        display: none
+
+    &__left
+      background: transparent
+
+    .news-box
+      display: none
+
+    .news-box-accordion
+      display: block

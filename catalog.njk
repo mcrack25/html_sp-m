@@ -1,0 +1,554 @@
+{% extends "njk/layout/pages.njk" %}
+
+{% set pages__title = 'Каталог: Модный трикотаж' %}
+
+{% set p_pages__class = 'p-catalog' %}
+
+{% 
+  set breadcrumbs_list = [
+    "Главная",
+    "Каталоги",
+    "Модный трикотаж"
+  ]
+%}
+
+{% from "njk/widgets/widget-stops.njk" import widget_stops %}
+{% from "njk/widgets/widget-news.njk" import widget_news %}
+{% from "njk/widgets/widget-image.njk" import widget_image %}
+
+{% from "njk/widgets/widget-combo.njk" import widget_combo %}
+{% from "njk/widgets/widget-checkboxes.njk" import widget_checkboxes %}
+{% from "njk/widgets/widget-filter-cat.njk" import widget_filter_cat %}
+{% from "njk/widgets/widget-prices.njk" import widget_prices %}
+{% from "njk/widgets/widget-s-catalogs.njk" import widget_s_catalogs %}
+
+{% from "njk/macro/filters.njk" import filters %}
+{% from "njk/macro/pagination.njk" import pagination %}
+{% from "njk/macro/showing.njk" import showing %}
+
+{% from "njk/cards/catalog-one.njk" import catalog_one %}
+
+{% block sidebar %}
+  <div class="sidebar__box">
+    {{ widget_stops('Календарь стопов') }}
+  </div>
+  <div class="sidebar__box">
+    {{ widget_news('Новости') }}
+  </div>
+  <div class="sidebar__box">
+    {{ widget_image() }}
+  </div>
+  
+{% endblock %}
+
+{% block page_content %}
+
+  <div class="p-catalog__content">
+    <div class="p-catalog__left">
+      
+      <div class="one-catalog-info">
+        <div class="one-catalog-info__img-content">
+          <a href="#" class="one-catalog-info__img-box imageFill">
+            <img src="img/catalogs-one_1.jpg" alt="one-catalog-info" class="one-catalog-info__img">
+          </a>
+          <ul class="stars stars_disabled">
+            <li class="active"></li>
+            <li class="active"></li>
+            <li class="active"></li>
+            <li class="active"></li>
+            <li class="active"></li>
+          </ul>
+          <div class="my-mark my-mark_red">Популярная</div>
+      
+          <div class="one-catalog-info__img-bottom">
+      
+            <div class="one-catalog-info__heading">
+              <div class="one-catalog-info__title">
+                <a href="#">Все для сада</a>
+                <a href="#"><img src="img/heart.svg" alt="img"></a>
+              </div>
+              <div class="one-catalog-info__desc">
+                <a href="#">
+                  1500 сюжетов для вашего творчества
+                </a>
+              </div>
+            </div>
+      
+            <div class="one-catalog-info__round_right">
+              <a href="#">
+                <svg>
+                  <use xlink:href="img/round_right.svg#icon"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="one-catalog-info__right">
+          <div class="one-catalog-info__text-content">
+            <div class="one-catalog-info__author-box">
+              <a href="#" class="one-catalog-info__author">
+                <div class="one-catalog-info__avatar">
+                  <img src="img/author__img.png" alt="avatar" class="one-catalog-info__avatar-img">
+                  <img src="img/badge.png" alt="badge" class="one-catalog-info__badge-img">
+                </div>
+                <div class="one-catalog-info__info">
+                  <div class="one-catalog-info__name">
+                    Нина Ивановна
+                  </div>
+                  <div class="one-catalog-info__rating">
+                    Рейтинг <span class="round round_brown one-catalog-info__rating-round">8,9</span>
+                  </div>
+                </div>
+              </a>
+              <div class="one-catalog-info__checks-2">
+                <ul>
+                  <li>Доставка: 14-28 дней</li>
+                  <li>Бесплатная доставка</li>
+                  <li>Орг. сбор: 16%</li>
+                </ul>
+                <a href="#" class="one-catalog-info__riad">
+                  <img src="img/ico_riad.svg" alt="img">
+                </a>
+              </div>
+            </div>
+      
+            <div class="one-catalog-info__info-in">
+              <div class="one-catalog-info__info-top">
+                <ul>
+                  <li>
+                    <span class="one-catalog-info__icon">
+                      <img src="img/ico_time.svg" alt="ico">
+                    </span>
+                    До стопа осталось: 12 дней</li>
+                  <li>
+                    <span class="one-catalog-info__icon">
+                      <img src="img/ico_otziv.svg" alt="ico">
+                    </span>
+                    Отзывы о закупке
+                    <a href="#" class="round round_green">870</a>
+                    <a href="#" class="round round_black">0</a>
+                    <a href="#" class="round round_red">0</a>
+                  </li>
+                  <li>
+                    <span class="one-catalog-info__icon">
+                      <img src="img/ico_cash.svg" alt="ico">
+                    </span>
+                    Дешевле на 48% чем в магазинах</li>
+                </ul>
+                <a href="#" class="one-catalog-info__info-messages">
+                  <img src="img/messages_round.svg" alt="message">
+                </a>
+              </div>
+              <div class="progress-bar one-catalog-info__progress-bar">
+                <div class="progress-bar__line" style="width: 75%"></div>
+                <div class="progress-bar__text">
+                  Набрано 75% из 15 000 р.
+                </div>
+              </div>
+            </div>
+
+            <div class="one-catalog-info__buttons">
+              <ul>
+                <li>
+                  <a href="#" class="simple-button simple-button_sky-pink">
+                    <svg class="icon icon_heart">
+                      <use xlink:href="img/icons/heart.svg#icon"></use>
+                    </svg>
+                    Добавить в закладки
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="simple-button simple-button_sky-blue">
+                    <svg class="icon icon_message">
+                      <use xlink:href="img/icons/message.svg#icon"></use>
+                    </svg>
+                    Читать тему форума
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block__title info-block__title_red">
+          <div class="info-block__title-text">
+            Сообщение от организатора
+          </div>
+          <div class="info-block__title-date">
+            Последнее редактирование - 10.07.2019 г.
+          </div>
+        </div>
+        <div class="info-block__body">
+          <div class="info-block__paragraph">
+            <p>
+              Всем доброго дня суток, меня зовут Надежда!
+            </p>
+            <p>
+              Приглашаю Вас в закупку верхней одежды для детей возрастом до 16 лет на сезон ВЕСНА,ОСЕНЬ,ЗИМА известных
+              марок Kiko,Donilo, RM kids, Levin Force, Bilemi, KALBORN.
+              Для участия в закупке у Вас должен быть заполнен личный профиль, обязательно поля "Телефон" и
+              "Имя". Новичкам необходимо ознакомиться с разделами "Правила и Традиции СП". Ваш заказ в закупке означает
+              согласие со всеми правилами сайта и условиями закупки. <a href="#">Читать полностью...</a>
+            </p>
+          </div>
+          <div class="info-block__files">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="img/docs/jpg.png" alt="img">
+                  <span>Размерная_сетка_girl.jpg [JPG, 39 KB]</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/docs/excel.png" alt="img">
+                  <span>Размерная сетка.xls [XLS, 29 KB]</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block__title info-block__title_blue">
+          <div class="info-block__title-text">
+            Информация
+          </div>
+        </div>
+        <div class="info-block__body">
+          <div class="info-block__container">
+            <div class="info-block__infos">
+              <ul>
+                <li>
+                  <div class="info-block__item-text">
+                    <p>
+                      <b>Участник обязан оплатить заказ в течение 2-х дней с момента подтверждения.</b>
+                      <br>
+                      Несвоевременная оплата товара, включенного в счет, приводит к снижению уровня на сайте
+                      и ограничениям на участие в других закупках
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="info-block__item-text">
+                    <p>
+                      К заказу общей суммой менее 300 р. прибавляется 10 р. (доставка в офис)
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="info-block__buttons">
+              <ul>
+                <li>
+                  <a href="#" class="simple-button simple-button_sky">
+                    Традиции СП и справка
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="simple-button simple-button_sky">
+                    Публичная оферта сайта
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="p-catalog__right">
+      <div class="condition-buy">
+        <div class="condition-buy__main-title">
+          Условия закупки
+        </div>
+        <div class="condition-buy__list">
+          <ul>
+            <li class="condition-buy__item">
+              <span class="condition-buy__icon">
+                <svg class="icon icon_percent">
+                  <use xlink:href="img/icons/percent.svg#icon"></use>
+                </svg>
+              </span>
+              <div class="condition-buy__text-box">
+                <div class="condition-buy__title">Орг. сбор: 16%</div>
+              </div>
+            </li>
+            <li class="condition-buy__item condition-buy__item_green">
+              <span class="condition-buy__icon">
+                <svg class="icon icon_card">
+                  <use xlink:href="img/icons/card.svg#icon"></use>
+                </svg>
+              </span>
+              <div class="condition-buy__text-box">
+                <div class="condition-buy__title">Предоплата</div>
+              </div>
+            </li>
+            <li class="condition-buy__item">
+              <span class="condition-buy__icon">
+                <svg class="icon icon_garant">
+                  <use xlink:href="img/icons/garant.svg#icon"></use>
+                </svg>
+              </span>
+              <div class="condition-buy__text-box">
+                <div class="condition-buy__title">Гарантии по доп. параметрам</div>
+                <div class="condition-buy__text">
+                  Коммен орга в поле гарании по доп. парам (если да - то зеленая, если нет - желтая)
+                </div>
+              </div>
+            </li>
+            <li class="condition-buy__item">
+              <span class="condition-buy__icon">
+                <svg class="icon icon_brak">
+                  <use xlink:href="img/icons/brak.svg#icon"></use>
+                </svg>
+              </span>
+              <div class="condition-buy__text-box">
+                <div class="condition-buy__title">Замена брака</div>
+                <div class="condition-buy__text">
+                  Комментарий организатора в поле условия замены брака
+                </div>
+              </div>
+            </li>
+            <li class="condition-buy__item">
+              <span class="condition-buy__icon">
+                <svg class="icon icon_del-price">
+                  <use xlink:href="img/icons/del-price.svg#icon"></use>
+                </svg>
+              </span>
+              <div class="condition-buy__text-box">
+                <div class="condition-buy__title">Стоимость доставки: 20-45 р.</div>
+                <div class="condition-buy__text">
+                  Указана за одну позицию и рассчитывается автоматически на основе предыдущих выкупов. Может отличаться от указанного
+                  значения в зависимости от объема и габарита вашего заказа
+                </div>
+              </div>
+            </li>
+            <li class="condition-buy__item">
+              <span class="condition-buy__icon">
+                <svg class="icon icon_time">
+                  <use xlink:href="img/icons/time.svg#icon"></use>
+                </svg>
+              </span>
+              <div class="condition-buy__text-box">
+                <div class="condition-buy__title">
+                  Срок доставки: 14-28 дней
+                </div>
+                <div class="condition-buy__text">
+                  Рассчитывается автоматически на основе предыдущих выкупов и указан для транзитных (центральных) офисов
+                </div>
+              </div>
+            </li>
+            <li class="condition-buy__item condition-buy__item_pink">
+              <span class="condition-buy__icon">
+                <svg class="icon icon_no-raid">
+                  <use xlink:href="img/icons/no-raid.svg#icon"></use>
+                </svg>
+              </span>
+              <div class="condition-buy__text-box">
+                <div class="condition-buy__title">Без рядов</div>
+              </div>
+            </li>
+            <li class="condition-buy__item">
+              <span class="condition-buy__icon">
+                <svg class="icon icon_map">
+                  <use xlink:href="img/icons/map.svg#icon"></use>
+                </svg>
+              </span>
+              <div class="condition-buy__text-box">
+                <div class="condition-buy__title">
+                  Выдача заказов:
+                </div>
+                <div class="condition-buy__text">
+                  Только НН, область самовывоз из транзита
+                </div>
+              </div>
+            </li>
+            <li class="condition-buy__item condition-buy__item_blue">
+              <span class="condition-buy__icon">
+                <svg class="icon icon_link">
+                  <use xlink:href="img/icons/link.svg#icon"></use>
+                </svg>
+              </span>
+              <div class="condition-buy__text-box">
+                <div class="condition-buy__title">
+                  Полный ассортимент: в каталоге
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="news-box-accordion">
+        <div class="news-box-accordion__title">
+          Новости закупки
+        </div>
+        <div class="news-box-accordion__body">
+          <a href="#" class="news-box-accordion__article">
+            Новости за сегодня и вчера жирные ! Распродажа коллекции Весна-19. Скидки до 50%! блабла бла вторая строчка
+          </a>
+          <a href="#" class="news-box-accordion__article">
+            Новость за больше 3 меньше 10 дней Добавлены 200 позиций верхней одежды Добавлены 200 позиций верхней одежды
+          </a>
+          <a href="#" class="news-box-accordion__article">
+            Новость за старше 7 дней бледная . РАСПРОДАЖА НАЧАЛАСЬ!! СКИДКИ ДО 30 %
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="news-box">
+    <div class="news-box__title">
+      Новости закупки
+    </div>
+
+    <div class="news-box__slider-box">
+      {% include "njk/sliders/news-box-slider.njk" %}
+      <div class="news-box-slider__dots"></div>
+    </div>
+    
+    <div class="news-box-text">
+      <ul class="news-box-text__dates">
+        <li>
+          <div class="news-box-text__dates-title">
+            <a href="#">Сегодня</a>
+          </div>
+          <div class="news-box-text__dates-desc">
+            <a href="#">Организатор</a>
+          </div>
+        </li>
+        <li>
+          <div class="news-box-text__dates-title">05 июля</div>
+          <div class="news-box-text__dates-desc">Модератор</div>
+        </li>
+        <li>
+          <div class="news-box-text__dates-title">10 мая</div>
+          <div class="news-box-text__dates-desc">Администратор</div>
+        </li>
+      </ul>
+      <div class="news-box-text__news">
+        <div class="news-box-text__news-title">
+          <a href="#">
+            Новости за сегодня и вчера жирные ! Распродажа коллекции Весна-19. Скидки до 50%! блабла бла вторая строчка
+          </a>
+        </div>
+        <ul>
+          <li>
+            <a href="#">
+              Новость за больше 3 меньше 10 дней Добавлены 200 позиций верхней одежды Добавлены 200 позиций верхней одежды
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Новость за старше 7 дней бледная . РАСПРОДАЖА НАЧАЛАСЬ!! СКИДКИ ДО 30 %
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  {% include "njk/sliders/slider-comments.njk" %}
+{% endblock %}
+
+<!-- Подключаем второй этаж сайдбара и контента -->
+{% set page_content__level_two = true %}
+
+{% block sidebar_two %}
+  <div class="sidebar__box">
+    {{ 
+      widget_combo([
+        widget_checkboxes('', ["Популярные", "Новинки", "Товары со скидкой", "В наличии", "Товары с отзывами"], '', 'type', 1),
+        widget_filter_cat('Фильтр по категориям'),
+        widget_prices('Цена'),
+        widget_s_catalogs('Искать в каталоге'),
+        widget_checkboxes('Размер', ["42", "44", "46"], ['48', '50'], 'size', 2, 'Показать все >', 'right'),
+
+        widget_checkboxes(
+          'Цвет', 
+          [
+            { color: "pink", title: 'Розовый' },
+            { color: "gray", title: 'Серый' },
+            { color: "white", title: 'Белый' }
+          ], 
+          [
+            { color: "red", title: 'Красный' },
+            { color: "green", title: 'Зелёный' },
+            { color: "blue", title: 'Синий' }
+          ],
+          'color', 3, 'Показать все >', 'right', true
+        )
+
+      ]) 
+    }}
+  </div>
+{% endblock %}
+
+{% block page_content_two %}
+  <h2 class="p-pages__title_two">Все товары каталога</h2>
+
+  <div class="content__head">
+    <div class="content-head__desc d-none d-xl-block">
+      <div class="content__actions">
+        {% include "njk/parts/sort-box.njk" %}
+        {% include "njk/parts/position-box.njk" %}
+      </div>
+  
+      <div class="content__filters">
+        {{ filters() }}
+        {{ filters(true) }}
+      </div>
+  
+      <div class="paginator-wrapper">
+        <div class="filters-desc">
+          Показано 2 каталога из 1163
+        </div>
+        <nav class="paginator">
+          {{ pagination('paginator__left') }}
+          {{ showing('paginator__right') }}
+        </nav>
+      </div>
+  
+    </div>
+  
+    <div class="content-head__mobile d-block d-xl-none">
+      {% include "njk/parts/mobile-sort.njk" %}
+  
+      {% include "njk/parts/mobile-showing.njk" %}
+  
+      {% include "njk/parts/mobile-filters.njk" %}
+  
+      <nav class="paginator">
+        {{ pagination('paginator__left') }}
+      </nav>
+    </div>
+  </div>
+
+  <div class="content__body">
+    <div class="catalogs-alone">
+      <div class="switching switching_line">
+        {{ catalog_one(true) }}
+        {{ catalog_one(true) }}
+        {{ catalog_one(true) }}
+        {{ catalog_one(true) }}
+        {{ catalog_one(true) }}
+        {{ catalog_one(true) }}
+        {{ catalog_one(true) }}
+        {{ catalog_one(true) }}
+        {{ catalog_one(true) }}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block after_body %}
+  {% include "njk/parts/mobile-filters-catalog_popup.njk" %}
+{% endblock %}

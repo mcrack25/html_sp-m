@@ -1,0 +1,26 @@
+{% macro widget_recommendation(title_text, desc_text, price) %}
+    
+    <div class="widget widget-recommendation">
+      <div class="widget__body">
+        <div class="widget-recommendation__m-title">
+          <a href="#">
+            {{ title_text}}
+          </a>
+        </div>
+        <div class="widget-recommendation__out">
+          <a href="#" class="widget-recommendation__img-box imageFill">
+            <img src="img/widget-recommendation_2.jpg" alt="img" class="widget-recommendation__img">
+          </a>
+          <div class="widget-recommendation__text-box">
+            <div class="widget-recommendation__p-title">
+              <a href="#">
+              {{ desc_text }}
+              </a>
+            </div>
+            <span class="widget-recommendation__price">{{ price }} руб</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endmacro %}

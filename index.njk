@@ -1,0 +1,556 @@
+{% set pageId = 1 %}
+{% set title = "Союз покупателей - Главная" %}
+
+{% extends "njk/layout/main.njk" %}
+
+{% block content %}
+  <!-- Слайдер на главной -->
+  {% include "njk/sliders/main-slider.njk" %}
+
+  <!-- Список категорий -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="categories">
+          <ul class="categories__list">
+            <li>
+              <a href="#">Женская одежда</a>
+            </li>
+            <li>
+              <a href="#">Мужская одежда</a>
+            </li>
+            <li>
+              <a href="#">Детская одежда</a>
+            </li>
+            <li>
+              <a href="#">Обувь</a>
+            </li>
+            <li>
+              <a href="#">Детские товары</a>
+            </li>
+            <li>
+              <a href="#">Сумки и аксессуары</a>
+            </li>
+            <li>
+              <a href="#">Красота и здоровье</a>
+            </li>
+            <li>
+              <a href="#">Дом, кухня, сад и огород</a>
+            </li>
+            <li>
+              <a href="#">Хобби, спорт, животные</a>
+            </li>
+            <li>
+              <a href="#">Техника, др.</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Товары со скидкой -->
+  <div class="goods">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-4 col-lg-12">
+          <div class="good good_red">
+            <a href="#" class="good__head">
+              <h2 class="good__title">
+                Товары со скидкой
+              </h2>
+              <span class="good__more">
+                <span>Хочу больше</span> →
+              </span>
+            </a>
+            <div class="good__body good-cards__1">
+              <div class="card-two">
+                <a href="#" class="card-two__img-box imagefill">
+                  <img src="img/card-two_1.jpg" alt="Товар" class="card-two__img">
+                </a>
+                <div class="card-two__text-box">
+                  <a href="#" class="button button_ghost-gray">
+                    Соблазн
+                  </a>
+                  <a href="#" class="card-two__title">
+                    ТП-НН-01 Наматрасник
+                    непромокаемый
+                  </a>
+                  <div class="prices">
+                    <span class="prices__old">
+                      500
+                    </span>
+                    <span class="prices__new">
+                      435руб.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-one card-one_1">
+                <a href="#" class="card-one__img-box imagefill">
+                  <img src="img/card-one_1.jpg" alt="Товар" class="card-one__img">
+                </a>
+                <div class="card-one__text-box">
+                  <a href="#" class="card-one__title">Ботинки FLAMINGO (30-36)</a>
+                  <div class="prices">
+                    <span class="prices__old">
+                      500
+                    </span>
+                    <span class="prices__new">
+                      435руб.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-one card-one_2">
+                <a href="#" class="card-one__img-box imagefill">
+                  <img src="img/card-one_2.jpg" alt="Товар" class="card-one__img">
+                </a>
+                <div class="card-one__text-box">
+                  <a href="#" class="card-one__title">MILAVITSA бюстгальтер мяг...</a>
+                  <div class="prices">
+                    <span class="prices__old">
+                      10800
+                    </span>
+                    <span class="prices__new">
+                      8000руб.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 d-none d-lg-flex">
+          <div class="good good_blue">
+            <a href="#" class="good__head">
+              <h2 class="good__title">
+                Популярные закупки
+              </h2>
+              <span class="good__more">
+                <span>Хочу больше</span> →
+              </span>
+            </a>
+            <div class="good__body good-cards__2">
+
+              <div class="card-one card-one_1">
+                <a href="#" class="card-one__img-box imagefill">
+                  <img src="img/card-one_3.jpg" alt="Товар" class="card-one__img">
+                </a>
+                <div class="card-one__text-box">
+                  <a href="#" class="card-one__title">Ботинки FLAMINGO (30-36)</a>
+                  <div class="prices">
+                    <span class="prices__old">
+                      500
+                    </span>
+                    <span class="prices__new">
+                      435руб.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-one card-one_2">
+                <a href="#" class="card-one__img-box imagefill">
+                  <img src="img/card-one_4.jpg" alt="Товар" class="card-one__img">
+                </a>
+                <div class="card-one__text-box">
+                  <a href="#" class="card-one__title">Ботинки FLAMINGO (30-36)</a>
+                  <div class="prices">
+                    <span class="prices__old">
+                      500
+                    </span>
+                    <span class="prices__new">
+                      435руб.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-one card-one_3">
+                <a href="#" class="card-one__img-box imagefill">
+                  <img src="img/card-one_5.jpg" alt="Товар" class="card-one__img">
+                </a>
+                <div class="card-one__text-box">
+                  <a href="#" class="card-one__title">Ботинки FLAMINGO (30-36)</a>
+                  <div class="prices">
+                    <span class="prices__old">
+                      500
+                    </span>
+                    <span class="prices__new">
+                      435руб.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-one card-one_4">
+                <a href="#" class="card-one__img-box imagefill">
+                  <img src="img/card-one_2.jpg" alt="Товар" class="card-one__img">
+                </a>
+                <div class="card-one__text-box">
+                  <a href="#" class="card-one__title">Ботинки FLAMINGO (30-36)</a>
+                  <div class="prices">
+                    <span class="prices__old">
+                      500
+                    </span>
+                    <span class="prices__new">
+                      435руб.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 d-none d-lg-flex">
+          <div class="good good_green">
+            <a href="#" class="good__head">
+              <h2 class="good__title">
+                Акции и распродажи
+              </h2>
+              <span class="good__more">
+                <span>Хочу больше</span> →
+              </span>
+            </a>
+            <div class="good__body good-cards__3">
+              <div class="card-one card-one_1">
+                <a href="#" class="card-one__img-box imagefill">
+                  <img src="img/card-one_6.jpg" alt="Товар" class="card-one__img">
+                </a>
+                <div class="card-one__text-box">
+                  <a href="#" class="card-one__title">Ботинки FLAMINGO (30-36)</a>
+                  <div class="prices">
+                    <span class="prices__old">
+                      500
+                    </span>
+                    <span class="prices__new">
+                      435руб.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-one card-one_2">
+                <a href="#" class="card-one__img-box imagefill">
+                  <img src="img/card-one_7.jpg" alt="Товар" class="card-one__img">
+                </a>
+                <div class="card-one__text-box">
+                  <a href="#" class="card-one__title">Ботинки FLAMINGO (30-36)</a>
+                  <div class="prices">
+                    <span class="prices__old">
+                      500
+                    </span>
+                    <span class="prices__new">
+                      435руб.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-two">
+                <a href="#" class="card-two__img-box">
+                  <img src="img/card-two_2.jpg" alt="Товар" class="card-two__img">
+                </a>
+                <div class="card-two__text-box">
+                  <a href="#" class="button button_ghost-gray">
+                    Соблазн
+                  </a>
+                  <a href="#" class="card-two__title">
+                    ТП-НН-01 Наматрасник
+                    непромокаемый
+                  </a>
+                  <div class="prices">
+                    <span class="prices__old">
+                      500
+                    </span>
+                    <span class="prices__new">
+                      435руб.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRID каталоги -->
+  <section class="catalog">
+    <div class="catalog__head">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="block catalog__block">
+              <div class="block__head">
+                <h2 class="block__title">
+                  Новинки на сайте
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="catalog__body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="products">
+              <div class="card-one-c card-one-c__left">
+                <a href="#" class="card-one-c__img-box imagefill">
+                  <img src="img/card_1.jpg" alt="" class="card-one-c__img">
+                </a>
+                <div class="card-one-c__body">
+                  <div class="card-one-c__name">
+                    Фактурная сумка-шопер
+                  </div>
+                  <div class="card-one-c__buy">
+                    <div class="card-one-c__price">
+                      1100 руб.
+                    </div>
+                    <button class="cat-btn">Купить</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-one-c card-one-c__min-1">
+                <a href="#" class="card-one-c__img-box imagefill">
+                  <img src="img/card_2.jpg" alt="img" class="card-one-c__img">
+                </a>
+                <div class="card-one-c__body">
+                  <div class="card-one-c__name">
+                    Туфли с мысом под крокодила
+                  </div>
+                  <div class="card-one-c__buy">
+                    <div class="card-one-c__price">
+                      1100 руб.
+                    </div>
+                    <button class="cat-btn">Купить</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-one-c card-one-c__min-2">
+                <a href="#" class="card-one-c__img-box imagefill">
+                  <img src="img/card_3.jpg" alt="" class="card-one-c__img">
+                </a>
+                <div class="card-one-c__body">
+                  <div class="card-one-c__name">
+                    Очки солнцезащитные
+                  </div>
+                  <div class="card-one-c__buy">
+                    <div class="card-one-c__price">
+                      1100 руб.
+                    </div>
+                    <button class="cat-btn">Купить</button>
+                  </div>
+                </div>
+              </div>
+              <div class="mini-form card-one-c__form">
+                <div class="mini-form__title">
+                  Будь в курсе<br>
+                  акций<br>
+                  и новинок
+                </div>
+                <form action="#" class="mini-form__form">
+                  <input type="email" placeholder="E-mail" class="mini-form__input">
+                  <button type="submit" class="mini-form__button">Подписаться</button>
+                </form>
+              </div>
+              <div class="card-one-c card-one-c__min-4">
+                <a href="#" class="card-one-c__img-box">
+                  <img src="img/card_4.jpg" alt="" class="card-one-c__img">
+                </a>
+                <div class="card-one-c__body">
+                  <div class="card-one-c__name">
+                    Фактурная сумка-шопер
+                  </div>
+                  <div class="card-one-c__buy">
+                    <div class="card-one-c__price">
+                      1100 руб.
+                    </div>
+                    <button class="cat-btn">Купить</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-one-c card-one-c__right">
+                <a href="#" class="card-one-c__img-box">
+                  <img src="img/card_5.jpg" alt="" class="card-one-c__img">
+                </a>
+                <div class="card-one-c__body">
+                  <div class="card-one-c__name">
+                    Фактурная сумка-шопер
+                  </div>
+                  <div class="card-one-c__buy">
+                    <div class="card-one-c__price">
+                      1100 руб.
+                    </div>
+                    <button class="cat-btn">Купить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Комментарии и форма -->
+  <section class="comments">
+    <div class="comments__head">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="block comments__block">
+              <div class="block__head">
+                <h2 class="block__title">
+                  Отзывы на лучшие товары
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comments__body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="comment">
+              <div class="comment__img-box imagefill">
+                <img src="img/comment_1.jpg" alt="comment" class="comment__img-product">
+              </div>
+              <h4 class="comment__title">
+                Контейнер для еды силиконовый
+              </h4>
+              <div class="comment__rating">
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li></li>
+                </ul>
+                <div class="comment__click">
+                  <a href="#" class="comment__all-link">
+                    53 отзыва (Читать все)
+                  </a>
+                </div>
+              </div>
+              <div class="comment__author">
+                <img src="img/author__img.png" alt="author" class="comment__author-img">
+                <div class="comment__author-name">
+                  Марина
+                </div>
+              </div>
+              <div class="comment__text">
+                Мне очень понравился! Складной контейнер, выполненный из силикона, это удобная и легкая тара для
+                хранения и транспортировки бутербродов, порционных салатов, мяса или рыбы, горячих и холодных блюд,
+                даже
+                жидких продуктов.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="comment">
+              <div class="comment__img-box imagefill">
+                <img src="img/comment_2.jpg" alt="comment" class="comment__img-product">
+              </div>
+              <h4 class="comment__title">
+                Постельное белье Перкаль...
+              </h4>
+              <div class="comment__rating">
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                </ul>
+                <div class="comment__click">
+                  <a href="#" class="comment__all-link">
+                    20 отзыва (Читать все)
+                  </a>
+                </div>
+              </div>
+              <div class="comment__author">
+                <img src="img/author__img.png" alt="author" class="comment__author-img">
+                <div class="comment__author-name">
+                  Марина
+                </div>
+              </div>
+              <div class="comment__text">
+                Мне очень понравился! Складной контейнер, выполненный из силикона, это удобная и легкая тара для
+                хранения и транспортировки бутербродов, порционных салатов, мяса или рыбы, горячих и холодных блюд,
+                даже
+                жидких продуктов.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="comment">
+              <div class="comment__img-box imagefill">
+                <img src="img/comment_3.jpg" alt="comment" class="comment__img-product">
+              </div>
+              <h4 class="comment__title">
+                Жвачка Вишня (100 гр.)
+              </h4>
+              <div class="comment__rating">
+                <ul class="stars">
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                  <li class="active"></li>
+                </ul>
+                <div class="comment__click">
+                  <a href="#" class="comment__all-link">
+                    32 отзыва (Читать все)
+                  </a>
+                </div>
+              </div>
+              <div class="comment__author">
+                <img src="img/author__img.png" alt="author" class="comment__author-img">
+                <div class="comment__author-name">
+                  Марина
+                </div>
+              </div>
+              <div class="comment__text">
+                Мне очень понравился! Складной контейнер, выполненный из силикона, это удобная и легкая тара для
+                хранения и транспортировки бутербродов, порционных салатов, мяса или рыбы, горячих и холодных блюд,
+                даже
+                жидких продуктов.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="subscribe">
+              <img src="img/logo.png" alt="logo" class="subscribe__img">
+              <div class="subscribe__title">
+                Будь в курсе<br>
+                акций и новинок!
+              </div>
+              <form action="#" class="subscribe__form">
+                <input type="text" class="subscribe__input" placeholder="E-mail">
+                <button type="submit" class="button button_orange subscribe__button">
+                  Подписаться
+                </button>
+              </form>
+              <a href="#" class="subscribe__policy">
+                Политика конфиденциальности
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Женская, Мужская и др. одежды -->
+  {% from "njk/macro/buying.njk" import buying %}
+  {{ buying('Женская одежда', 'red') }}
+  {{ buying('Мужская одежда', 'green') }}
+  {{ buying('Детская одежда', 'blue') }}
+{% endblock %}

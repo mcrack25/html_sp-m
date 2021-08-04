@@ -1,0 +1,226 @@
+/* Media */
+@media (min-width: 768px)
+  .wrapper
+    max-width: 720px
+
+@media (min-width: 992px)
+  .wrapper
+    max-width: 960px
+
+@media (min-width: 1200px)
+  .wrapper
+    max-width: 1140px
+
+@media (min-width: 1340px)
+  .wrapper
+    max-width: 1340px
+
+@media (max-width: 1340.999px)
+  .item-slider
+    &__item
+      height: 46px
+      line-height: 46px
+
+  .good
+    margin-bottom: 20px
+    &__title
+      font-size: 2.2rem
+
+  .menu-popup
+    &__list
+      font-size: 1.2rem
+
+@media (max-width: 1200.999px)
+  .item-slider
+    &__item
+      height: 38px
+      line-height: 38px
+
+  .header
+    &__top
+      .search-form
+        margin-right: 20px
+        flex-basis: 30%
+  .user-sign
+    flex-basis: 28%
+
+  .menu-popup
+    &__list
+      font-size: 1.1rem
+
+  .sort-box
+    &__title
+      text-align: center
+    &__items
+      a
+        height: 50px
+        text-align: center
+
+  .p-pages
+    &__head-in
+      margin-left: 0
+
+  .paginator
+    justify-content: center
+    .pagination
+      li
+        &:nth-child(5),
+        &:nth-child(6)
+          display: none
+
+    &__right
+      display: none
+
+  .mobile-filters
+    display: none  
+
+@media (max-width: 992.999px)
+
+  input,
+  textarea,
+  select
+    font-size: 16px !important
+
+  .good__more
+    span
+      display: none
+
+  .header
+    &__bottom
+      flex-wrap: wrap
+    &__block
+      margin-bottom: 10px
+      width: 100%
+      display: flex
+      justify-content: space-between
+      &:last-child
+        margin-bottom: 0
+    .menu
+      width: 100%
+      &__list
+        justify-content: space-between
+
+  .sliders
+    &__left
+      width: 100%
+    &__right
+      display: none
+
+  .main-slider
+    margin: 0
+
+
+  .categories
+    overflow: hidden
+    max-height: 110px
+
+  .good-cards__1
+    display: grid
+    grid-column-gap: 15px
+    grid-row-gap: 15px
+    grid-template-rows: auto
+    grid-template-areas: "card-two card-one_1" "card-two card-one_2"
+    justify-content: center
+
+  .card-two,
+  .card-one
+    height: 100%
+    max-width: 200px
+  .card-two
+    flex-direction: column
+
+  .products
+    display: grid
+    grid-column-gap: 15px
+    grid-row-gap: 15px
+    grid-template-rows: 2fr 1fr 1fr 3fr
+    grid-template-areas: "card-one-c__left" "card-one-c__min-1" "card-one-c__form" "card-one-c__right"
+    grid-template-columns: 100%
+    justify-content: center
+    .card-one-c
+      &__min-1,
+      &__form,
+      &__right,
+        margin: 0 30px
+      &__min-2,
+      &__min-4
+        display: none
+
+  .comment,
+  .subscribe
+    margin-bottom: 20px
+
+  .buy-big
+    min-height: 500px
+    &__text-box
+      margin-top: 20px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+    &__info
+      margin-top: 15px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 100%
+
+  .buying
+    &__band
+      margin: 0
+      &:before
+        display: none
+    &__style
+      &:after
+        display: none
+    &__all
+      display: none
+      &-bottom
+        display: table !important
+    &__cards
+      margin: 0 50px
+      display: block
+    .buy-min
+      min-height: 250px
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4)
+        display: none
+        background: #333
+
+  .footer
+    &__bottom
+      text-align: center
+    .copy
+      margin: 0 auto
+
+    .f-logo
+      max-width: 290px
+      margin: 0 auto
+    
+    .site-info
+      text-align: center
+      margin: 0 auto
+      margin-top: 20px
+
+    .support-info
+      display: none
+
+    .develop-info
+      margin-top: 20px
+
+  .go-up
+    position: initial
+    display: table
+    margin: 0px auto 20px
+
+
+  .mobile-filters
+    display: block  
+
+@media (max-width: 500.999px)
+  .good-cards__1
+    grid-template-columns: 1fr 1fr
+
+  .content
+    &__body
+      margin: 15px -15px 0

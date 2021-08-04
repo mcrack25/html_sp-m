@@ -1,0 +1,1969 @@
+<!doctype html>
+<html lang="ru">
+
+
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+
+    <!-- Для диопазона цен и других фишек -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Мои стили -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Союз покупателей</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header class="header" id="header">
+            <div class="header__pc d-none d-lg-block">
+                <div class="header__top">
+                    <div class="logo">
+                        <a href="/" class="logo__img-box">
+                            <img src="img/logo.png" alt="Союз покупателей" class="logo__img">
+                        </a>
+                        <div class="logo__text">
+                            <div class="logo__title">
+                                Союз Покупателей
+                            </div>
+                            <div class="logo__desc">
+                                <a href="#">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>Нижний Новгород
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-form">
+                        <input type="text" class="search-form__input" placeholder="Я ищу...">
+                        <button class="search-form__button">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="user-sign">
+                        <div class="user-box">
+                            <div class="user-box__img-box">
+                                <img src="img/user.png" alt="user" class="user-box__img">
+                            </div>
+                            <div class="user-box__text-box">
+                                <a href="#" class="user-box__title">Администратор</a>
+                                <div class="user-box__money">
+                                    Банк: <b>0 ₽</b>
+                                </div>
+                                <div class="user-box__id">
+                                    ID: 27350 Новичок
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sign-in">
+                            <a href="#" class="sign-in__link">Выход</a>
+                            <i class="fa fa-angle-right sign-in__icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__bottom">
+                    <div class="header__block">
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li><a href="/">ГЛАВНАЯ</a>
+                                </li>
+                                <li><a href="/catalogs.html" class="catalog-btn">КАТАЛОГИ <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                    <div class="menu__sub menu-popup">
+                                        <div class="menu-popup__in">
+                                            <ul class="menu-popup__list">
+                                                <li data-submenu-id="submenu-1">
+                                                    <a href="#">Женская одежда <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li data-submenu-id="submenu-2">
+                                                    <a href="#">Мужчкая одежда <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li data-submenu-id="submenu-3">
+                                                    <a href="#">Детская одежда <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li data-submenu-id="submenu-4">
+                                                    <a href="#">Обувь <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li data-submenu-id="submenu-5">
+                                                    <a href="#">Детские товары <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li data-submenu-id="submenu-6">
+                                                    <a href="#">Сумки, аксессуары <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li data-submenu-id="submenu-7">
+                                                    <a href="#">Красота и здоровье <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li data-submenu-id="submenu-8">
+                                                    <a href="#">Дом. Кухня. Дача <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li data-submenu-id="submenu-9">
+                                                    <a href="#">Хобби. Спорт. Досуг <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li data-submenu-id="submenu-10">
+                                                    <a href="#">Техника, прочее <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="menu-popup__submenus">
+                                                <div id="submenu-1" class="popover">
+                                                    <div class="popover-content">
+                                                        <div class="popover__menus">
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="submenu-2" class="popover">
+                                                    <div class="popover-content">
+                                                        <div class="popover__menus">
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="submenu-3" class="popover">
+                                                    <div class="popover-content">
+                                                        <div class="popover__menus">
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="popover-menu">
+                                                                <div class="popover-menu__title">
+                                                                    <img src="img/dress__icon.png" alt="dress" class="popover-menu__img">Одежда
+                                                                </div>
+                                                                <ul class="popover-menu__list">
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                    <li><a href="#">Платья и туники</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="submenu-4" class="popover">
+                                                    <h3 class="popover-title">Baby Pygmy Marmoset</h3>
+                                                    <div class="popover-content">
+                                                    </div>
+                                                </div>
+                                                <div id="submenu-5" class="popover">
+                                                    <h3 class="popover-title">Black Lion Tamarin</h3>
+                                                    <div class="popover-content">
+                                                    </div>
+                                                </div>
+                                                <div id="submenu-6" class="popover">
+                                                    <h3 class="popover-title">Monk Saki</h3>
+                                                    <div class="popover-content">
+                                                    </div>
+                                                </div>
+                                                <div id="submenu-7" class="popover">
+                                                    <h3 class="popover-title">Gabon</h3>
+                                                    <div class="popover-content">
+                                                    </div>
+                                                </div>
+                                                <div id="submenu-8" class="popover">
+                                                    <h3 class="popover-title">Grivet</h3>
+                                                    <div class="popover-content">
+                                                    </div>
+                                                </div>
+                                                <div id="submenu-9" class="popover">
+                                                    <h3 class="popover-title">Red Leaf</h3>
+                                                    <div class="popover-content">
+                                                    </div>
+                                                </div>
+                                                <div id="submenu-10" class="popover">
+                                                    <h3 class="popover-title">King Colobus</h3>
+                                                    <div class="popover-content">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#">РАБОЧАЯ КНОПКА</a>
+                                </li>
+                                <li><a href="#">ПРИСТРОЙ</a>
+                                </li>
+                                <li><a href="#">ФОРУМ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="header__block">
+                        <div class="basket-btn">
+                            <a href="#" class="basket-btn__link">
+                                <i class="fa fa-shopping-cart basket-btn__icon" aria-hidden="true"></i>
+                                <span class="basket-btn__text">Корзина</span>
+                                <span class="basket-btn__count">2</span>
+                            </a>
+                        </div>
+
+                        <div class="extra">
+                            <ul class="extra__list">
+                                <li>
+                                    <a href="#" class="info-btn info-btn_sky">
+                                        <i class="fa fa-bell-o info-btn__icon" aria-hidden="true"></i>
+                                        <span class="info-btn__count">2</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="info-btn info-btn_purple">
+                                        <i class="fa fa-envelope-o info-btn__icon" aria-hidden="true"></i>
+                                        <span class="info-btn__count">2</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="info-btn info-btn_red">
+                                        <i class="fa fa-heart info-btn__icon" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="info-btn info-btn_blue">
+                                        <i class="fa fa-question-circle info-btn__icon" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="menu-btn menu-btn_pc">
+                            <a href="#" class="menu-btn__link">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__mob header-mob d-lg-none">
+                <div class="header-mob__top">
+                    <div class="logo">
+                        <a href="#" class="logo__img-box">
+                            <img src="img/logo.png" alt="Союз покупателей" class="logo__img">
+                        </a>
+                        <div class="logo__text">
+                            <div class="logo__title">
+                                Союз Покупателей
+                            </div>
+                            <div class="logo__desc">
+                                <a href="#">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>Нижний Новгород
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-btn menu-btn_mob">
+                        <a href="#" class="menu-btn__link">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-mob__bottom">
+                    <div class="header-mob__box">
+                        <div class="basket-btn">
+                            <a href="/catalogs.html" class="basket-btn__link">
+                                <span class="basket-btn__text">КАТАЛОГИ</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-mob__box">
+                        <div class="user-box">
+                            <div class="user-box__img-box">
+                                <img src="img/user.png" alt="user" class="user-box__img">
+                            </div>
+                        </div>
+                        <ul class="extra__list">
+                            <li>
+                                <a href="#" class="info-btn info-btn_sky">
+                                    <i class="fa fa-shopping-cart info-btn__icon" aria-hidden="true"></i>
+                                    <span class="info-btn__count">2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="info-btn info-btn_red">
+                                    <i class="fa fa-heart info-btn__icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-mob__search">
+                    <div class="search-form">
+                        <input type="text" class="search-form__input" placeholder="Я ищу...">
+                        <button class="search-form__button">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="gamburg-menu">
+                <div class="gamburg-menu__left">
+                    <div class="gamburg-menu__title">
+                        Реклама
+                    </div>
+                    <div class="gamburg-menu__submenus">
+                        <div id="gamburg-menu__item-1" class="popover">
+                            <div class="gamburg-menu__submenu-box">
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="gamburg-menu__item-2" class="popover">
+                            <div class="gamburg-menu__submenu-box">
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать 2 рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="gamburg-menu__item-3" class="popover">
+                            <div class="gamburg-menu__submenu-box">
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать 3 рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="gamburg-menu__item-4" class="popover">
+                            <div class="gamburg-menu__submenu-box">
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать 4 рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="gamburg-menu__item-5" class="popover">
+                            <div class="gamburg-menu__submenu-box">
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать 5 рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="gamburg-menu__item-6" class="popover">
+                            <div class="gamburg-menu__submenu-box">
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать 6 рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="gamburg-menu__item-7" class="popover">
+                            <div class="gamburg-menu__submenu-box">
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать 7 рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gamburg-menu-submenu">
+                                    <ul>
+                                        <li><a href="#">Заказать рекламу</a>
+                                        </li>
+                                        <li><a href="#">Размещение баннеров</a>
+                                        </li>
+                                        <li><a href="#">Настройка рекламы</a>
+                                        </li>
+                                        <li><a href="#">Статистика</a>
+                                        </li>
+                                        <li><a href="#">Управление рекламными кампаниями</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="gamburg-menu__right">
+                    <div class="gamburg-menu__socials">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gamburg-main-menu">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/menu_user_icon.png" alt="img">Кабинет пользователя
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/menu_buy_icon.png" alt="img">Закупки
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gamburg-right-menu">
+                        <ul class="gamburg-right-menu__list">
+                            <li data-submenu-id="gamburg-menu__item-1">
+                                <a href="/">
+                                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>Главная
+                                </a>
+                            </li>
+                            <li data-submenu-id="gamburg-menu__item-2">
+                                <a href="#">
+                                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>Корзина
+                                </a>
+                            </li>
+                            <li data-submenu-id="gamburg-menu__item-3">
+                                <a href="#">
+                                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>Офисы
+                                </a>
+                            </li>
+                            <li data-submenu-id="gamburg-menu__item-4">
+                                <a href="#">
+                                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>Форум
+                                </a>
+                            </li>
+                            <li data-submenu-id="gamburg-menu__item-5">
+                                <a href="#">
+                                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>Реклама
+                                </a>
+                            </li>
+                            <li data-submenu-id="gamburg-menu__item-6">
+                                <a href="#">
+                                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>Курьеры
+                                </a>
+                            </li>
+                            <li data-submenu-id="gamburg-menu__item-7">
+                                <a href="#">
+                                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>Управление
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Контентная часть сайта -->
+
+        <div class="p-pages p-catalogs">
+            <div class="p-pages__head">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="p-pages__head-in">
+
+                                <!-- Хлебные крошки -->
+
+
+
+                                <div class="breadcrumbs">
+                                    <ul class="breadcrumbs__list">
+
+
+                                        <li><a href="#">Главная</a>
+                                        </li>
+
+
+
+
+                                        <li><a href="#">Каталоги</a>
+                                        </li>
+
+
+
+
+
+                                        <li><span>Модный трикотаж</span>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+
+
+
+                                <h2 class="p-pages__title">
+
+                  Каталог: Модный трикотаж
+
+                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="page-content__one">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-2 col-lg-3 d-none d-lg-block">
+                                <div class="sidebar">
+
+                                    <div class="sidebar__box">
+
+
+                                        <div class="widget widget-stops">
+                                            <div class="widget__title">Календарь стопов</div>
+                                            <div class="widget__body">
+                                                <div class="slider-stop">
+                                                    <div class="slider-stop__list">
+                                                        <div class="slider-stop__item">
+                                                            <div class="stop-product">
+                                                                <a href="#" class="stop-product__img-box">
+                                                                    <img src="img/stop-product_1.jpg" alt="stop-product" class="stop-product__img">
+                                                                </a>
+                                                                <div class="stop-product__title">
+                                                                    <a href="#">Носки от 3,5 рублей</a>
+                                                                </div>
+                                                                <div class="stop-product__info">
+                                                                    Стоп: сегодня
+                                                                </div>
+                                                                <div class="stop-product__desc">
+                                                                    Самая низкая цена и быстрая доставка
+                                                                </div>
+                                                            </div>
+                                                            <div class="stop-product">
+                                                                <a href="#" class="stop-product__img-box">
+                                                                    <img src="img/stop-product_1.jpg" alt="stop-product" class="stop-product__img">
+                                                                </a>
+                                                                <div class="stop-product__title">
+                                                                    <a href="#">Носки от 3,5 рублей</a>
+                                                                </div>
+                                                                <div class="stop-product__info">
+                                                                    Стоп: сегодня
+                                                                </div>
+                                                                <div class="stop-product__desc">
+                                                                    Самая низкая цена и быстрая доставка
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slider-stop__item">
+                                                            <div class="stop-product">
+                                                                <a href="#" class="stop-product__img-box">
+                                                                    <img src="img/stop-product_1.jpg" alt="stop-product" class="stop-product__img">
+                                                                </a>
+                                                                <div class="stop-product__title">
+                                                                    <a href="#">Носки от 3,5 рублей</a>
+                                                                </div>
+                                                                <div class="stop-product__info">
+                                                                    Стоп: сегодня
+                                                                </div>
+                                                                <div class="stop-product__desc">
+                                                                    Самая низкая цена и быстрая доставка
+                                                                </div>
+                                                            </div>
+                                                            <div class="stop-product">
+                                                                <a href="#" class="stop-product__img-box">
+                                                                    <img src="img/stop-product_1.jpg" alt="stop-product" class="stop-product__img">
+                                                                </a>
+                                                                <div class="stop-product__title">
+                                                                    <a href="#">Носки от 3,5 рублей</a>
+                                                                </div>
+                                                                <div class="stop-product__info">
+                                                                    Стоп: сегодня
+                                                                </div>
+                                                                <div class="stop-product__desc">
+                                                                    Самая низкая цена и быстрая доставка
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slider-stop__dots"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="sidebar__box">
+
+
+                                        <div class="widget widget-news">
+                                            <div class="widget__title">Новости</div>
+                                            <div class="widget__body">
+                                                <div class="widget-news__list">
+                                                    <div class="widget-news__item">
+                                                        <a href="#" class="widget-news__img-box">
+                                                            <img src="img/widget-news_1.jpg" alt="widget-news" class="widget-news__img">
+                                                        </a>
+                                                        <div class="widget-news__title">
+                                                            <a href="#">
+
+              Парк Швейцария в
+
+              Нижнем Новгороде
+
+              хотят полностью
+
+              переделать (фото)
+
+            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="widget-news__item">
+                                                        <a href="#" class="widget-news__img-box">
+                                                            <img src="img/widget-news_1.jpg" alt="widget-news" class="widget-news__img">
+                                                        </a>
+                                                        <div class="widget-news__title">
+                                                            <a href="#">
+
+              Парк Швейцария в
+
+              Нижнем Новгороде
+
+              хотят полностью
+
+              переделать (фото)
+
+            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="widget-news__item">
+                                                        <a href="#" class="widget-news__img-box">
+                                                            <img src="img/widget-news_1.jpg" alt="widget-news" class="widget-news__img">
+                                                        </a>
+                                                        <div class="widget-news__title">
+                                                            <a href="#">
+
+              Парк Швейцария в
+
+              Нижнем Новгороде
+
+              хотят полностью
+
+              переделать (фото)
+
+            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="sidebar__box">
+
+                                        <div class="widget widget-image">
+                                            <div class="widget__body">
+                                                <a href="#" class="widget-image__img-box">
+                                                    <img src="img/widget-image_1.jpg" alt="img" class="widget-image__img">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-9 col-sm-12">
+                                <div class="content">
+                                    <!-- Контентная часть сайта -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="page-content__two">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-2 col-lg-3 d-none d-lg-block">
+                                <div class="sidebar">
+
+                                    <div class="sidebar__box">
+
+
+                                        <div class="widget widget_combo">
+                                            <div class="widget__title">Поиск по каталогу Модный трикотаж</div>
+                                            <div class="widget__body">
+
+
+
+
+
+
+
+
+                                                <div class="widget widget-checkboxes">
+                                                    <div class="widget__title"></div>
+                                                    <div class="widget__body">
+                                                        <ul class="widget__checkboxes">
+
+
+
+
+
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="type" id="widget_type_1" class="check">
+                                                                    <label for="widget_type_1" class="label">Популярные</label>
+                                                                </div>
+                                                            </li>
+
+
+
+
+
+
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="type" id="widget_type_2" class="check">
+                                                                    <label for="widget_type_2" class="label">Новинки</label>
+                                                                </div>
+                                                            </li>
+
+
+
+
+
+
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="type" id="widget_type_3" class="check">
+                                                                    <label for="widget_type_3" class="label">Товары со скидкой</label>
+                                                                </div>
+                                                            </li>
+
+
+
+
+
+
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="type" id="widget_type_4" class="check">
+                                                                    <label for="widget_type_4" class="label">В наличии</label>
+                                                                </div>
+                                                            </li>
+
+
+
+
+
+
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="type" id="widget_type_5" class="check">
+                                                                    <label for="widget_type_5" class="label">Товары с отзывами</label>
+                                                                </div>
+                                                            </li>
+
+
+
+
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+
+                                                <div class="widget widget-filter-cat">
+                                                    <div class="widget__title">
+                                                        Фильтр по категориям
+                                                    </div>
+                                                    <div class="widget__body">
+
+                                                        <div class="input-group input-block input-block_blue">
+                                                            <input type="text" class="form-control input-block__input">
+                                                            <div class="input-group-prepend">
+                                                                <button class="input-block__button">
+                                                                    <i class="fa fa-filter" aria-hidden="true"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+
+
+
+                                                <div class="widget widget-prices">
+                                                    <div class="widget__title">
+                                                        Цена
+                                                    </div>
+                                                    <div class="widget__body">
+                                                        <div class="widget-prices__slider-range"></div>
+                                                        <div class="widget-prices__inputs">
+                                                            <div class="widget-prices__input-box">
+                                                                <span class="widget-prices__input-title">от</span>
+                                                                <input type="text" class="widget-prices__input widget-prices__before" value="">
+                                                            </div>
+                                                            <div class="widget-prices__input-box">
+                                                                <span class="widget-prices__input-title">до</span>
+                                                                <input type="text" class="widget-prices__input widget-prices__after" value="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+
+
+                                                <div class="widget widget-s_catalogs">
+                                                    <div class="widget__title">
+                                                        Искать в каталоге
+                                                    </div>
+                                                    <div class="widget__body">
+                                                        <div class="widget-s_catalogs__item">
+
+                                                            <div class="search-box">
+
+                                                                <div class="search-box__title">
+                                                                    Название
+                                                                </div>
+
+                                                                <div class="input-group input-block ">
+                                                                    <input type="text" class="form-control input-block__input" value="">
+                                                                    <div class="input-group-prepend">
+                                                                        <button class="input-block__button">
+                                                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="widget-s_catalogs__item">
+
+                                                            <div class="search-box">
+
+                                                                <div class="search-box__title">
+                                                                    Артикул
+                                                                </div>
+
+                                                                <div class="input-group input-block ">
+                                                                    <input type="text" class="form-control input-block__input" value="">
+                                                                    <div class="input-group-prepend">
+                                                                        <button class="input-block__button">
+                                                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="widget-s_catalogs__item">
+
+                                                            <div class="search-box">
+
+                                                                <div class="search-box__title">
+                                                                    Столбец/название
+                                                                </div>
+
+                                                                <div class="input-group input-block ">
+                                                                    <input type="text" class="form-control input-block__input" value="">
+                                                                    <div class="input-group-prepend">
+                                                                        <button class="input-block__button">
+                                                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="widget-s_catalogs__item">
+
+                                                            <div class="search-box">
+
+                                                                <div class="search-box__title">
+                                                                    Столбец/название
+                                                                </div>
+
+                                                                <div class="input-group input-block ">
+                                                                    <input type="text" class="form-control input-block__input" value="">
+                                                                    <div class="input-group-prepend">
+                                                                        <button class="input-block__button">
+                                                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="widget-s_catalogs__item">
+
+                                                            <div class="search-box">
+
+                                                                <div class="search-box__title">
+                                                                    Столбец/название
+                                                                </div>
+
+                                                                <div class="input-group input-block ">
+                                                                    <input type="text" class="form-control input-block__input" value="">
+                                                                    <div class="input-group-prepend">
+                                                                        <button class="input-block__button">
+                                                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+
+
+
+
+
+
+
+
+
+                                                <div class="widget widget-checkboxes">
+                                                    <div class="widget__title">Размер</div>
+                                                    <div class="widget__body">
+                                                        <ul class="widget__checkboxes">
+
+
+
+
+
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="size" id="widget_size_1" class="check">
+                                                                    <label for="widget_size_1" class="label">42</label>
+                                                                </div>
+                                                            </li>
+
+
+
+
+
+
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="size" id="widget_size_2" class="check">
+                                                                    <label for="widget_size_2" class="label">44</label>
+                                                                </div>
+                                                            </li>
+
+
+
+
+
+
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="size" id="widget_size_3" class="check">
+                                                                    <label for="widget_size_3" class="label">46</label>
+                                                                </div>
+                                                            </li>
+
+
+
+
+
+                                                            <li>
+                                                                <ul class="collapse" id="collapse_2">
+
+
+
+
+                                                                    <li>
+                                                                        <div class="checkbox">
+                                                                            <input type="checkbox" name="size" id="widget_size_4" class="check">
+                                                                            <label for="widget_size_4" class="label">48</label>
+                                                                        </div>
+                                                                    </li>
+
+
+
+
+
+
+                                                                    <li>
+                                                                        <div class="checkbox">
+                                                                            <input type="checkbox" name="size" id="widget_size_5" class="check">
+                                                                            <label for="widget_size_5" class="label">50</label>
+                                                                        </div>
+                                                                    </li>
+
+
+
+                                                                </ul>
+
+
+                                                                <a href="#" data-toggle="collapse" data-target="#collapse_2" aria-expanded="false" aria-controls="collapse_2" class="collapse_list collapse_list_right">
+
+                Показать все &gt;
+
+              </a>
+
+
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+
+
+
+
+
+                                                <div class="widget widget-checkboxes">
+                                                    <div class="widget__title">Цвет</div>
+                                                    <div class="widget__body">
+                                                        <ul class="widget__checkboxes">
+
+
+
+
+
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="color" id="widget_color_1" class="check">
+                                                                    <label for="widget_color_1" class="label"><span class="checkbox__round checkbox__round_pink"></span> Розовый</label>
+                                                                </div>
+                                                            </li>
+
+
+
+
+
+
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="color" id="widget_color_2" class="check">
+                                                                    <label for="widget_color_2" class="label"><span class="checkbox__round checkbox__round_gray"></span> Серый</label>
+                                                                </div>
+                                                            </li>
+
+
+
+
+
+
+                                                            <li>
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" name="color" id="widget_color_3" class="check">
+                                                                    <label for="widget_color_3" class="label"><span class="checkbox__round checkbox__round_white"></span> Белый</label>
+                                                                </div>
+                                                            </li>
+
+
+
+
+
+                                                            <li>
+                                                                <ul class="collapse" id="collapse_3">
+
+
+
+
+                                                                    <li>
+                                                                        <div class="checkbox">
+                                                                            <input type="checkbox" name="color" id="widget_color_4" class="check">
+                                                                            <label for="widget_color_4" class="label"> <span class="checkbox__round checkbox__round_red"></span> Красный</label>
+                                                                        </div>
+                                                                    </li>
+
+
+
+
+
+
+                                                                    <li>
+                                                                        <div class="checkbox">
+                                                                            <input type="checkbox" name="color" id="widget_color_5" class="check">
+                                                                            <label for="widget_color_5" class="label"> <span class="checkbox__round checkbox__round_green"></span> Зелёный</label>
+                                                                        </div>
+                                                                    </li>
+
+
+
+
+
+
+                                                                    <li>
+                                                                        <div class="checkbox">
+                                                                            <input type="checkbox" name="color" id="widget_color_6" class="check">
+                                                                            <label for="widget_color_6" class="label"> <span class="checkbox__round checkbox__round_blue"></span> Синий</label>
+                                                                        </div>
+                                                                    </li>
+
+
+
+                                                                </ul>
+
+
+                                                                <a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="false" aria-controls="collapse_3" class="collapse_list collapse_list_right">
+
+                Показать все &gt;
+
+              </a>
+
+
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-9 col-sm-12">
+                                <div class="content">
+                                    <!-- Контентная часть сайта -->
+
+                                    <h2 class="p-pages__title_two">Все товары каталога</h2>
+
+                                    <div class="content__head">
+                                        <div class="content-head__desc d-none d-xl-block">
+                                            <div class="content__actions">
+                                                <div class="sort-box">
+                                                    <span class="sort-box__title">Сортировать по:</span>
+                                                    <div class="sort-box__items">
+                                                        <ul>
+                                                            <li class="sort-box__selected">
+                                                                <a href="#">
+
+          Рейтингу закупки
+
+          <img src="img/sort_up_down.svg" alt="sort">
+
+        </a>
+                                                            </li>
+                                                            <li><a href="#">Среднему сроку поставки</a>
+                                                            </li>
+                                                            <li><a href="#">Собранности</a>
+                                                            </li>
+                                                            <li><a href="#">Экономии</a>
+                                                            </li>
+                                                            <li><a href="#">Рейтингу организатора</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="position-box">
+                                                    <div class="position-box__items">
+                                                        <ul>
+                                                            <li class="sets set_line position-box__selected">
+                                                                <div class="position-box__icon">
+                                                                    <img src="img/icon_line.svg" alt="icon">
+                                                                </div>
+                                                            </li>
+                                                            <li class="sets set_block">
+                                                                <div class="position-box__icon">
+                                                                    <img src="img/icon_block.svg" alt="icon">
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="content__filters">
+
+                                                <div class="filters">
+                                                    <ul class="filters__list">
+                                                        <li class="filters__item">
+                                                            <div class="filters__one">
+                                                                Женская одежда
+                                                                <span class="filters__close">+</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="filters__item">
+                                                            <div class="filters__one">
+                                                                4
+                                                                <img src="img/star_on.png" alt="star" class="filters__star">и выше
+                                                                <span class="filters__close">+</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+
+                                                <div class="filters">
+                                                    <ul class="filters__list">
+                                                        <li class="filters__item">
+                                                            <div class="filters__one">
+                                                                Женская одежда
+                                                                <span class="filters__close">+</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="filters__item">
+                                                            <div class="filters__one">
+                                                                4
+                                                                <img src="img/star_on.png" alt="star" class="filters__star">и выше
+                                                                <span class="filters__close">+</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                    <button class="filters__reset">
+                                                        Сбросить
+                                                    </button>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="paginator-wrapper">
+                                                <div class="filters-desc">
+                                                    Показано 2 каталога из 1163
+                                                </div>
+                                                <nav class="paginator">
+
+                                                    <ul class="pagination pagination_sp paginator__left">
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link" href="#" tabindex="-1">
+                                                                <i class="fa fa-angle-left" aria-hidden="true"></i>Назад
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item active"><a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">2<span class="sr-only">(current)</span></a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">4</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">5</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">...</a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">115</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">
+
+        Вперёд
+
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+      </a>
+                                                        </li>
+                                                    </ul>
+
+
+                                                    <div class="showing paginator__right">
+                                                        Записей на странице
+                                                        <select name="show">
+                                                            <option value="100">100</option>
+                                                            <option value="200">200</option>
+                                                            <option value="300">300</option>
+                                                            <option value="400">400</option>
+                                                            <option value="500">500</option>
+                                                        </select>
+                                                    </div>
+
+                                                </nav>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="content-head__mobile d-block d-xl-none">
+                                            <div class="sort-mobile">
+                                                <div class="sort-mobile__title">Сортировать:</div>
+                                                <select name="sel" id="sel" class="sort-mobile__select">
+                                                    <option value="0">По популярности</option>
+                                                    <option value="1">По рейтингу</option>
+                                                    <option value="2">По категории</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="showing-mobile">
+                                                <div class="showing-mobile__title">Записей на странице:</div>
+                                                <select name="sel" id="sel" class="showing-mobile__select">
+                                                    <option value="100">100</option>
+                                                    <option value="200">200</option>
+                                                    <option value="300">300</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="filters-mobile">
+                                                <div class="filters">
+                                                    <ul class="filters__list">
+                                                        <li class="filters__item">
+                                                            <div class="filters__one">
+                                                                Женская одежда
+                                                                <span class="filters__close">+</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="filters__item">
+                                                            <div class="filters__one">
+                                                                4
+                                                                <img src="img/star_on.png" alt="star" class="filters__star">и выше
+                                                                <span class="filters__close">+</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="filters-mobile__bottom">
+                                                    <div class="filters-desc">
+                                                        Показано 2 каталога из 1163
+                                                    </div>
+                                                    <button class="filters-mobile__reset">
+                                                        Сбросить
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <nav class="paginator">
+
+                                                <ul class="pagination pagination_sp paginator__left">
+                                                    <li class="page-item disabled">
+                                                        <a class="page-link" href="#" tabindex="-1">
+                                                            <i class="fa fa-angle-left" aria-hidden="true"></i>Назад
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item active"><a class="page-link" href="#">1</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">2<span class="sr-only">(current)</span></a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">4</a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">5</a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">...</a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">115</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">
+
+        Вперёд
+
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+      </a>
+                                                    </li>
+                                                </ul>
+
+                                            </nav>
+                                        </div>
+                                    </div>
+
+                                    <div class="content__body">
+                                        <div class="products">
+                                            <div class="switching switching_line">
+
+                                                <div class="product-one">
+                                                    123
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            <!-- footer -->
+
+            <footer class="footer">
+                <div class="footer__top">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a href="#header" class="go-up">
+                                    <img src="img/go_up.png" alt="Вверх" class="go-up__img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="f-logo">
+                                    <div class="f-logo__img-box">
+                                        <a href="#" class="f-logo__link">
+                                            <img src="img/logo.png" alt="логотип" class="f-logo__img">
+                                        </a>
+                                    </div>
+                                    <div class="f-logo__text">
+                                        <div class="f-logo__title">
+                                            Союз Покупателей
+                                        </div>
+                                        <div class="f-logo__desc">
+                                            уникальные торговые площадки в традициях “совместных покупок”
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="site-info">
+                                    Официальный сайт совместных покупок «Союз покупателей - Нижний Новгород». На сайте можно купить недорогую и модную одежду, обувь и прочие товары от производителей по оптовой цене.
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="support-info">
+                                    <div class="support-info__text">
+                                        Тех. поддержка: <a href="mailto://support@nn-sp.ru" class="support-info__link">support@nn-sp.ru</a>
+                                    </div>
+                                    <div class="support-info__socials">
+                                        <div class="support-info__item">
+                                            <i class="fa fa-skype" aria-hidden="true"></i>
+                                            <a href="skype:jevodann?call" class="support-info__link">jevodann</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="copy">
+                                    © 2010-2019 Союз покупателей. Все права защищены.
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="develop-info">
+                                    Разработка и права на сайт
+                                    <br>
+                                    <a href="#" class="develop-info__link">
+
+                  ООО "Профи-софт", г. Нижний Новгород, 2009 г.
+
+                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+
+    </div>
+</body>
+
+
+
+<div class="mobile-menu">
+    <div class="mobile-menu__close-box">
+        <div class="mobile-menu__close">
+            <span>Закрыть</span>
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="mobile-menu__head">
+        <div class="mobile-menu__avatar-box">
+            <img src="img/user.png" alt="avatar" class="mobile-menu__avatar">
+        </div>
+        <div class="extra">
+            <ul class="extra__list">
+                <li>
+                    <a href="#" class="info-btn info-btn_sky">
+                        <i class="fa fa-bell-o info-btn__icon" aria-hidden="true"></i>
+                        <span class="info-btn__count">2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="info-btn info-btn_purple">
+                        <i class="fa fa-envelope-o info-btn__icon" aria-hidden="true"></i>
+                        <span class="info-btn__count">2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="info-btn info-btn_nopad info-btn_orange">
+                        <i class="fa fa-question-circle info-btn__icon" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mobile-menu__body">
+        <ul class="mobile-menu__list">
+            <li><a href="/">Главная</a>
+            </li>
+            <li><a href="/catalogs.html">Каталоги</a>
+            </li>
+            <li><a href="#">Рабочая кнопка</a>
+            </li>
+            <li><a href="#">Пристрой</a>
+            </li>
+            <li><a href="#">Кнопка</a>
+            </li>
+            <li><a href="#">Корзина</a>
+            </li>
+            <li><a href="#">Пункты выдачи</a>
+            </li>
+            <li><a href="#">Настройки</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mobile-menu__footer">
+        <button class="mobile-menu__button">
+            Выйти
+        </button>
+    </div>
+</div>
+
+<div class="overlay"></div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+<!-- Слайдер -->
+<script src="js/slick.js"></script>
+
+<!-- imageFill -->
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/jquery-imagefill.js"></script>
+
+<!-- Menu -->
+<script src="js/jquery.menu-aim.js"></script>
+
+<!-- jquery-ui -->
+<script src="js/jquery-ui_without_tooltip.js"></script>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+
+</html>

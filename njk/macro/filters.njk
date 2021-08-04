@@ -1,0 +1,25 @@
+{% macro filters(reset) %}
+  <div class="filters">
+    <ul class="filters__list">
+      <li class="filters__item">
+        <div class="filters__one">
+          Женская одежда
+          <span class="filters__close">+</span>
+        </div>
+      </li>
+      <li class="filters__item">
+        <div class="filters__one">
+          4
+          <img src="img/star_on.png" alt="star" class="filters__star">
+          и выше
+          <span class="filters__close">+</span>
+        </div>
+      </li>
+    </ul>
+    {% if (reset == true) %}
+      <button class="filters__reset">
+        Сбросить
+      </button>
+    {% endif %}
+  </div>
+{% endmacro %}

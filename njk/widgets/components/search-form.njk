@@ -1,0 +1,17 @@
+{% macro search_form(title, icon, class) %}
+  <div class="search-box">
+    {% if (title) %}
+      <div class="search-box__title">
+        {{ title }}
+      </div>
+    {% endif %}
+    <div class="input-group input-block {{ class }}">
+      <input type="text" class="form-control input-block__input" value="">
+      <div class="input-group-prepend">
+        <button class="input-block__button">
+          <i class="{{ icon }}" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

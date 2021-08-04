@@ -1,0 +1,14 @@
+{% macro widget_combo(widgets) %}
+
+  <div class="widget widget_combo">
+    <div class="widget__title">Поиск по каталогу Модный трикотаж</div>
+    <div class="widget__body">
+      
+      {% for widget in widgets %}
+
+        {{ widget }}
+
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

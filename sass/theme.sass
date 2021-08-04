@@ -1,0 +1,113 @@
+$color-blue: #0f80c2;
+$color-red: #ec4417;
+$color-green: #71a44c;
+  
+.good
+  &_red
+    .good__head,
+    .good__more,
+    .prices
+      color: $color-red
+    .card-one,
+    .card-two
+      &:hover
+        border-color: $color-red
+  &_green
+    .good__head,
+    .good__more,
+    .prices
+      color: $color-green
+    .card-one,
+    .card-two
+      &:hover
+        border-color: $color-green
+  &_blue
+    .good__head,
+    .good__more,
+    .prices
+      color: $color-blue
+    .card-one,
+    .card-two
+      &:hover
+        border-color: $color-blue
+
+.buying_red
+  .buying
+    &__band
+      background: $color-red
+      &:before     
+        border-top: 10px solid darken($color-red, 10%)
+        border-left: 10px solid transparent
+    &__body
+      background: #fce3d1
+    &__all
+      background: #fbdcc9
+      &:hover
+        background: darken(#fbdcc9, 5%)
+    &__price
+      color: $color-red
+  .cat-btn
+    color: #fff
+    background: $color-red
+    &:hover
+      color: #000
+      background: #ffbb8a
+  .buy-big,
+  .buy-min
+    transition: all 0.3s ease
+    &:hover
+      border-color: #ee5229
+
+.buying_green
+  .buying
+    &__band
+      background: $color-green
+      &:before     
+        border-top: 10px solid darken($color-green, 10%)
+        border-left: 10px solid transparent
+    &__body
+      background: #ebf2e6
+    &__all
+      background: #ebf2e6
+      &:hover
+        background: darken(#ebf2e6, 5%)
+    &__price
+      color: $color-green
+  .cat-btn
+    color: #fff
+    background: $color-green
+    &:hover
+      color: #000
+      background: #bcd4ab
+  .buy-big,
+  .buy-min
+    transition: all 0.3s ease
+    &:hover
+      border-color: #71a44c
+
+.buying_blue
+  .buying
+    &__band
+      background: $color-blue
+      &:before     
+        border-top: 10px solid darken($color-blue, 10%)
+        border-left: 10px solid transparent
+    &__body
+      background: #e9f4f9
+    &__all
+      background: #dfeef6
+      &:hover
+        background: darken(#dfeef6, 5%)
+    &__price
+      color: $color-blue
+  .cat-btn
+    color: #fff
+    background: $color-blue
+    &:hover
+      color: #000
+      background: #add4ea
+  .buy-big,
+  .buy-min
+    transition: all 0.3s ease
+    &:hover
+      border-color: #0f80c2

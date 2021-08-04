@@ -1,0 +1,17 @@
+{# Макрос Breadcrumbs #}
+{% macro breadcrumbs(titles) %}
+
+  <div class="breadcrumbs">
+    <ul class="breadcrumbs__list">
+      {% for title in titles %}
+        {% if not loop.last %}
+          <li><a href="#">{{title}}</a></li>
+        {% endif %}
+        {% if loop.last %}
+          <li><span>{{title}}</span></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+{% endmacro %}

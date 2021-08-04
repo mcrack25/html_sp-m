@@ -1,0 +1,144 @@
+{% extends "njk/layout/pages.njk" %}
+
+{% set pageId = 2 %}
+{% set pages__title = 'Детская одежда' %}
+
+{% set p_pages__class = 'p-catalogs' %}
+
+{% 
+  set breadcrumbs_list = [
+    "Главная",
+    "Сборы заказов",
+    pages__title
+  ]
+%}
+
+{% from "njk/widgets/widget-checkboxes.njk" import widget_checkboxes %}
+{% from "njk/widgets/widget-search.njk" import widget_search %}
+{% from "njk/widgets/widget-rating.njk" import widget_rating %}
+{% from "njk/widgets/widget-stops.njk" import widget_stops %}
+{% from "njk/widgets/widget-news.njk" import widget_news %}
+{% from "njk/widgets/widget-image.njk" import widget_image %}
+{% from "njk/widgets/widget-recommendation.njk" import widget_recommendation %}
+
+{% from "njk/macro/filters.njk" import filters %}
+{% from "njk/macro/pagination.njk" import pagination %}
+{% from "njk/macro/showing.njk" import showing %}
+
+{% from "njk/cards/catalogs-one.njk" import catalogs_one %}
+
+
+{% block sidebar %}
+  <div class="sidebar__box">
+    {{ widget_checkboxes('По категориям', ["Женская одежда", "Мужская одежда"], ["Другая", "Ещё одна"], 'category', 1) }}
+
+    {{ widget_search('Поиск по таблице') }}
+    
+    {{ widget_checkboxes('Фильтры закупок', ["Лучшие закупки", "Без орг. сбора"], '', 'buying', 2) }}
+
+    {{ widget_rating('Рейтинг закупки', [4,3,2,1], 2) }}
+
+    {{ widget_stops('Календарь стопов') }}
+  </div>
+
+  <div class="sidebar__box">
+    {{ widget_news('Новости') }}
+  </div>
+
+  <div class="sidebar__box">
+    {{ widget_image() }}
+
+    {{ widget_recommendation(
+    'Картины по номерам 40х50 от 230руб! Алмазная мозаика, вышивка! ПРИСТРОЙ',
+    'Алмазная мозаика 40x50 «GF2849»',
+    '840'
+    ) }}
+    
+    {{ widget_recommendation(
+    'НатурПродукт! Средства для дома, КОСМЕТИКА. ****Множество БРЕНДОВ****',
+    'КЛЕОНА - ОСВЕЖАЮЩИЙ ГЕЛЬ..',
+    '200'
+    ) }}
+
+    {{ widget_recommendation(
+    'Картины по номерам 40х50 от 230руб! Алмазная мозаика, вышивка! ПРИСТРОЙ',
+    'Алмазная мозаика 40x50 «GF2849»',
+    '840'
+    ) }}
+    
+    {{ widget_recommendation(
+    'НатурПродукт! Средства для дома, КОСМЕТИКА. ****Множество БРЕНДОВ****',
+    'КЛЕОНА - ОСВЕЖАЮЩИЙ ГЕЛЬ..',
+    '200'
+    ) }}
+
+    {{ widget_image() }}
+  </div>
+{% endblock %}
+
+{% block page_content %}
+  <div class="content__head">
+
+    <div class="content-head__desc d-none d-xl-block">
+      <div class="content__actions">
+        {% include "njk/parts/sort-box.njk" %}
+        {% include "njk/parts/position-box.njk" %}
+      </div>
+
+      <div class="content__filters">
+        {{ filters() }}
+        {{ filters(true) }}
+      </div>
+
+      <div class="paginator-wrapper">
+        <div class="filters-desc">
+          Показано 2 каталога из 1163
+        </div>
+        <nav class="paginator">
+          {{ pagination('paginator__left') }}
+          {{ showing('paginator__right') }}
+        </nav>
+      </div>
+
+    </div>
+
+    <div class="content-head__mobile d-block d-xl-none">
+      {% include "njk/parts/mobile-sort.njk" %}
+
+      {% include "njk/parts/mobile-showing.njk" %}
+
+      {% include "njk/parts/mobile-filters.njk" %}
+
+      <nav class="paginator">
+        {{ pagination('paginator__left') }}
+      </nav>
+    </div>
+  </div>
+
+  <div class="content__body">
+    <div class="catalogs">
+      <div class="switching switching_line">
+        {{ catalogs_one('red') }}
+        {{ catalogs_one('blue') }}
+        {{ catalogs_one('green') }}
+        {{ catalogs_one('orange') }}
+        {{ catalogs_one('purple') }}
+        {{ catalogs_one('green-lite') }}
+        {{ catalogs_one('red-lite') }}
+        {{ catalogs_one('red') }}
+        {{ catalogs_one('blue') }}
+      </div>
+    </div>
+  </div>
+
+  <div class="content__footer">
+    <nav class="paginator">
+      {{ pagination('paginator__left') }}
+      {{ showing('paginator__right') }}
+    </nav>
+  </div>
+{% endblock %}
+
+{% block after_body %}
+  {% include "njk/parts/mobile-filters-catalogs_popup.njk" %}
+{% endblock %}

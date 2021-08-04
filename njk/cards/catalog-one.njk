@@ -1,0 +1,133 @@
+{% macro catalog_one(button, number) %}
+  <div class="catalog-one">
+    <div class="catalog-one__left">
+      <div class="catalog-one-slider">
+        <div class="catalog-one-slider-img">
+          <div class="catalog-one-slider-img__list">
+            <div class="catalog-one-slider-img__item">
+              <img src="img/catalog-one.jpg" alt="img" class="catalog-one-slider-img__img">
+            </div>
+            <div class="catalog-one-slider-img__item">
+              <img src="img/catalog-one.jpg" alt="img" class="catalog-one-slider-img__img">
+            </div>
+            <div class="catalog-one-slider-img__item">
+              <img src="img/catalog-one.jpg" alt="img" class="catalog-one-slider-img__img">
+            </div>
+          </div>
+          <div class="catalog-one-slider-img__dots"></div>
+          <a href="#" class="catalog-one-slider-img__riad">
+            <img src="img/ico_riad.svg" alt="img">
+          </a>
+        </div>
+      
+        <div class="catalog-one-slider-thumb">
+          <div class="catalog-one-slider-thumb__list">
+            <div class="catalog-one-slider-thumb__item">
+              <img src="img/catalog-one__thumb_1.jpg" alt="img" class="catalog-one-slider-thumb__img">
+            </div>
+            <div class="catalog-one-slider-thumb__item">
+              <img src="img/catalog-one__thumb_2.jpg" alt="img" class="catalog-one-slider-thumb__img">
+            </div>
+            <div class="catalog-one-slider-thumb__item">
+              <img src="img/catalog-one__thumb_3.jpg" alt="img" class="catalog-one-slider-thumb__img">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-one__center">
+        <div class="catalog-one__head">
+          <div class="catalog-one__title">
+            <a href="#">Платье женское</a>
+          </div>
+          <div class="my-mark my-mark_20 my-mark_green">
+            Есть в пристрое
+          </div>
+        </div>
+      
+        <div class="catalog-one__info">
+          <span class="catalog-one__article">
+            702521
+          </span>
+          <a href="#" class="catalog-one__more">
+            Подробнее >
+          </a>
+          <a href="#" class="catalog-one__booked">
+            <img src="img/ico_riad.svg" alt="img">
+            Товар выкупается рядами. Заказано 5 из 8
+          </a>
+        </div>
+
+        <div class="catalog-one__text">
+          Платье приталенного силуэта яркого цвета. Отлично сидит по фигуре, подчеркивая ее достоинства. Подойдет девушкам,
+          которые любят привлекать к себе внимание... <a href="#">Читать полностью ></a>
+        </div>
+
+        <ul class="catalog-one__sizes square-sizes">
+          <li><div class="square square_hover square_r4">42</div></li>
+          <li><div class="square square_hover square_r4">44</div></li>
+          <li><div class="square square_hover square_r4">48</div></li>
+          <li><div class="square square_hover square_r4 square_active">50</div></li>
+          <li><div class="square square_hover square_r4">52</div></li>
+        </ul>
+
+        <div class="catalog-one__colors colors">
+          <div class="colors__title">Цвет:</div>
+          <ul class="colors__list">
+            <li>
+              <div class="colors__circle colors__circle_red"></div>
+              <div class="colors__name">красный</div>
+            </li>
+            <li>
+              <div class="colors__circle colors__circle_turquoise"></div>
+              <div class="colors__name">бирюзовый</div>
+            </li>
+            <li>
+              <div class="colors__circle colors__circle_lilac"></div>
+              <div class="colors__name">сиреневый</div>
+            </li>
+            <li>
+              <div class="colors__circle colors__circle_sea"></div>
+              <div class="colors__name">морская волна</div>
+            </li>
+          </ul>
+          <a href="#" class="colors__more">Все цвета ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="catalog-one__right">
+      <div class="catalog-one__reviews card-reviews">
+        <div class="card-reviews__title">Отзывы о товаре</div>
+        <ul class="card-reviews__list">
+          <li><a href="#" class="round round_green">870</a></li>
+          <li><a href="#" class="round round_black">0</a></li>
+          <li><a href="#" class="round round_red">0</a></li>
+        </ul>
+      </div>
+      <div class="catalog-one__price">
+        <div class="catalog-one__price_act">3000 руб.</div> 
+        <div class="catalog-one__price_old">3000 руб.</div>
+      </div>
+      <div class="catalog-one__buy-box">
+        <div class="catalog-one__buy">
+          <button class="cat-btn">Купить</button>
+        </div>
+        <div class="catalog-one__buttons">
+          <ul>
+            <li>
+              <a href="#" class="strong-icon strong-icon_almond">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="strong-icon strong-icon_pink">
+                <i class="fa fa-code" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endmacro %}

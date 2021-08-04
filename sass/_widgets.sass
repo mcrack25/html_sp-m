@@ -1,0 +1,248 @@
+.widget
+  background: #fff
+  border: 1px solid #e5e5dc
+  padding: 20px 10px
+  font-size: 1.6rem
+  
+  &__title,
+    color: #0f80c2
+    font-family: $font-ms
+    font-size: 1.4rem
+    font-weight: 900
+    margin-bottom: 15px
+
+
+  /* Виджет со списком чекбоксов */
+  &-checkboxes
+    .collapse_list
+      width: 100%
+      display: block
+      font-size: 1.4rem
+      margin-top: 5px
+      padding-left: 21px
+      &_right
+        padding: 0
+        text-align: right
+
+  /* Виджет поиска */
+  &-search
+    &__form
+      display: block
+      position: relative
+    input
+      border: none
+      outline: none
+      background: #f2f1f4
+      border-radius: 100px
+      min-width: 0
+      width: 100%
+      padding: 4px 30px 4px 15px
+      transition: all 0.3s ease
+      &:focus
+        box-shadow: 0 0 7px #000
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.08)
+    button
+      position: absolute
+      top: 50%
+      right: 10px
+      transform: translateY(-50%)
+      background: transparent
+      border: none
+      outline: none
+      font-size: 16px
+      color: #000
+
+  /* Виджет календаря стопов */
+  &-stops
+    .slider-stop
+      .stop-product
+        margin-bottom: 10px
+      &__dots
+        display: flex
+        align-items: center
+        justify-content: center
+        li
+          margin-right: 5px
+          &:last-child
+            margin-right: 0
+          button
+            border: none
+            transition: all 0.3s ease
+            height: 25px
+            width: 25px
+            line-height: 25px
+            background: #ebf5fe
+            color: #89b7dc
+            font-size: 14px
+            font-family: $font-ms
+            font-weight: 900
+            border-radius: 100px
+        li.slick-active
+          button
+            background: #cee7fd
+            color: #0f80c2
+
+    .stop-product
+      &__img-box
+        width: 100%
+        display: block
+      &__img
+        width: 100%
+      &__title
+        margin-top: 5px
+        font-family: $font-ms
+        font-size: 1.4rem
+        font-weight: 500
+        color: #2d3239
+        a
+        color: #2d3239
+        &:hover
+          color: darken(#2d3239, 5%)
+      &__info
+        font-family: $font-ms
+        font-size: 1.2rem
+        font-weight: 500
+        color: #a70adb
+      &__desc
+        font-size: 1.2rem
+        color: #919191
+
+  /* Виджет новостей */
+  &-news
+    &__item
+      display: flex
+      margin-bottom: 25px
+      &:last-child
+        margin-bottom: 0
+    &__img-box
+      flex-shrink: 0
+      display: block
+      height: 60px
+      width: 60px
+      margin-right: 7px
+    &__img
+      width: 100%
+      height: 100%
+    &__title
+      font-size: 1.2rem
+      color: #2670af
+      a
+        color: #2670af
+
+  /* Виджет рейтинга со звёздами */
+  &-rating
+    &__item
+      display: flex
+      align-items: center
+    &__text
+      color: #58616e
+      &_active
+        font-weight: 700
+    .stars
+      margin-right: 5px
+  
+  /* Виджет с изображением */
+  &-image
+    padding: 0
+    border: none
+    &__img
+      width: 100%
+
+  /* Виджет рекомендуемых товаров */
+  &-recommendation
+    padding: 5px 5px 4px 10px
+    &__out
+      display: flex
+      margin-top: 12px
+    &__img-box
+      flex-shrink: 0
+      display: block
+      width: 56px
+      height: 56px
+      border: 1px solid #f0e5b5
+      border-radius: 3px
+      overflow: hidden
+      margin-right: 7px
+    &__img
+      width: 100%
+      height: 100%
+    &__m-title
+      font-size: 1.4rem
+      font-weight: 500
+      a
+        color: #2670af
+    &__text-box
+    &__p-title
+      font-size: 1.1rem
+      a
+        color: $text-color
+    &__price
+      margin-top: 5px
+      display: block
+      font-size: 1.2rem
+      font-weight: 700
+      color: #58616e
+
+  /* Виджет в котором могут быть другие виджеты */
+  &_combo
+    .widget
+      background: transparent
+      padding: 0
+      border: none
+      margin-bottom: 20px !important
+      &__title
+        margin-bottom: 10px
+
+  &-prices
+    &__slider-range
+      width: 90%
+      margin: 0 auto
+    &__inputs
+      margin-top: 15px
+      display: flex
+      justify-content: space-between
+    &__input-box
+      display: flex
+      align-items: center
+    &__input-title
+      margin-right: 3px
+    &__input
+      min-width: 40px
+      width: 100%
+      max-width: 65px
+      background: $input-bg
+      border-radius: 100px
+      border: none
+      outline: none
+      padding: 4px 10px
+      font-size: 14px
+      &:focus
+        color: #495057
+        background-color: #fff
+        border-color: #80bdff
+        outline: 0
+        box-shadow: 0 0 0 .2rem rgba(0,123,255,.25)
+
+    .ui-slider-range
+      background: #00ABDB
+    .ui-slider-handle
+      top: -5px
+      height: 14px
+      width: 14px
+      background: #00ABDB
+      border: none
+    &__slider-range
+      height: 5px
+
+  &-s_catalogs
+    &__item
+      margin-bottom: 5px
+
+      
+/* Другие компоненты используемые в виджетах */
+
+.search-box
+  &__title
+    font-size: 14px
+    color: $text-color
+    margin-bottom: 4px

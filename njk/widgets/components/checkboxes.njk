@@ -1,0 +1,6 @@
+{% macro checkboxes(name, title, number=1) %}
+  <div class="checkbox">
+    <input type="checkbox" name="{{ name }}" id="widget_{{ name }}_{{ number }}" class="check">
+    <label for="widget_{{ name }}_{{ number }}" class="label">{{ title }}</label>
+  </div>
+{% endmacro %}

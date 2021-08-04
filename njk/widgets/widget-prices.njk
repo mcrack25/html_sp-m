@@ -1,0 +1,20 @@
+{% macro widget_prices(title) %}
+  <div class="widget widget-prices">
+    <div class="widget__title">
+      {{ title }}
+    </div>
+    <div class="widget__body">
+      <div class="widget-prices__slider-range"></div>
+      <div class="widget-prices__inputs">
+        <div class="widget-prices__input-box">
+          <span class="widget-prices__input-title">от</span>
+          <input type="text" class="widget-prices__input widget-prices__before" value="">
+        </div>
+        <div class="widget-prices__input-box">
+          <span class="widget-prices__input-title">до</span>
+          <input type="text" class="widget-prices__input widget-prices__after" value="">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

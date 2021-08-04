@@ -1,0 +1,56 @@
+{% from "../widgets/widget-combo.njk" import widget_combo %}
+
+<!-- Mobile filters -->
+<div class="mobile-filters">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="mobile-filters__in">
+        <div class="mobile-filters__hidden">
+
+          {{ 
+            widget_combo([
+              widget_checkboxes('', ["Популярные", "Новинки", "Товары со скидкой", "В наличии", "Товары с отзывами"], '', 'type', 5),
+              widget_filter_cat('Фильтр по категориям'),
+              widget_prices('Цена'),
+              widget_s_catalogs('Искать в каталоге'),
+              widget_checkboxes('Размер', ["42", "44", "46"], ['48', '50'], 'size', 5, 'Показать все >', 'right'),
+
+              widget_checkboxes(
+                'Цвет', 
+                [
+                  { color: "pink", title: 'Розовый' },
+                  { color: "gray", title: 'Серый' },
+                  { color: "white", title: 'Белый' }
+                ], 
+                [
+                  { color: "red", title: 'Красный' },
+                  { color: "green", title: 'Зелёный' },
+                  { color: "blue", title: 'Синий' }
+                ],
+                'color', 7, 'Показать все >', 'right', true
+              )
+
+            ]) 
+          }}
+
+        </div>
+
+        <div class="mobile-filters__visible">
+          <div class="mobile-filters__box">
+            <div></div>
+            <div class="mobile-filters__title">
+              Фильтры по каталогам
+            </div>
+            <div class="mobile-filters__icon mobile-filters__icon_active">
+              <svg viewBox="0 0 48 48">
+                <use xlink:href="img/round_right.svg#icon"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>

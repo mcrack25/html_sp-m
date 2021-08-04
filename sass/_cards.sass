@@ -1,0 +1,661 @@
+/* Карточки списка каталогов при разных видах отображения */
+.catalogs
+  .switching
+    &_line
+      .catalogs-one
+        margin-bottom: 20px
+        &__right
+          padding: 12px 12px 12px 65px
+          width: 100%
+          display: flex
+          justify-content: space-between
+        &__info-in
+          margin-left: 4px
+        &__info-top
+          margin-top: 10px
+        &__text-content
+          max-width: 270px
+        &__info-messages
+          display: none
+        &__checks-2
+          display: none
+        &__riad
+          display: none
+        &__round_right
+          opacity: 0
+    &_block
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: 15px
+      .catalogs-one
+        padding: 15px
+        max-width: 350px
+        display: flex
+        flex-direction: column
+        &__cat-content
+          display: none
+        &__author-box
+          order: 2
+        &__info
+          margin-left: 10px
+        &__info-in
+          order: 1
+        &__checks
+          display: none
+        &__text-content
+          padding-top: 8px
+        &__author-box
+          margin-top: 5px
+          display: flex
+          justify-content: space-between
+        &__info-top
+          display: flex
+          justify-content: space-between
+          align-items: center
+        &__info-messages
+          display: block
+        &__checks-2
+          display: block
+
+/* Карточка из списка каталогов */
+.catalogs-one
+  margin: 0 auto
+  transition: all 0.3s ease
+  position: relative
+  background: #fff
+  border: 1px solid #F1F0DE
+  display: flex
+  &:hover
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2)
+  &__right
+    transition: all 0.3s ease
+  &__img-content
+    position: relative
+    overflow: hidden
+    max-width: 320px
+    height: 216px
+    flex-shrink: 0
+    .stars
+      position: absolute
+      left: 16px
+      top: 12px
+      li
+        cursor: inherit
+    .my-mark
+      position: absolute
+      top: 12px
+      right: 12px
+  &__img-box
+    position: relative
+    display: block
+    width: 100%
+    height: 100%
+    &:before
+      content: ""
+      position: absolute
+      z-index: 0
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(to bottom, rgba(0,0,0,0.73) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.73) 100%)
+  &__img
+    width: 100%
+    height: 100%
+  &__img-bottom
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    padding: 10px 12px
+  &__heading
+    color: #fff
+    text-decoration-color: #fff !important
+    display: inline-block
+  &__title
+    font-family: $font-ms
+    font-weight: 900
+    font-size: 1.8rtem
+    color: #fff
+    a
+      color: #fff
+    img
+      width: 20px
+      margin-left: 16px
+  &__desc
+    margin-top: 10px
+    font-size: 1.4rem
+    color: #fff
+    a
+      color: #fff
+  &__round_right
+    position: absolute
+    right: 15px
+    bottom: 30px
+    opacity: 1
+    transition: all 0.3s ease
+    svg
+        width: 48px
+        height: 48px
+        fill: #fff
+        transition: all 0.3s ease
+        &:hover
+            fill: darken(#fff, 15%)
+  &__text-content
+    display: flex
+    flex-direction: column
+  &__author
+    display: flex
+    &:hover
+      text-decoration: none
+  &__avatar
+    height: 40px
+    width: 40px
+    position: relative
+    &-img
+      width: 100%
+  &__badge-img
+    position: absolute
+    bottom: -5px
+    right: -5px
+    display: block
+    height: 20px
+    width: 20px
+  &__info
+    margin-left: 16px
+  &__name
+    font-family: $font-ms
+    font-size: 1.8rem
+    font-weight: 700
+    color: #57606F
+  &__rating
+    margin-top: 4px
+    font-style: italic
+    font-size: 1.2rem
+    color: #A8ABB0
+    &-round
+      margin: 0 5px
+      border-radius: 100px
+  &__info-top
+    font-size: 1.4rem
+    ul
+      line-height: 1.3em
+    .round
+      font-size: 1.2rem
+  &__icon
+    img
+      width: 18px
+  &__progress-bar
+    margin-top: 12px
+  &__checks-2
+    font-size: 1.2rem
+    text-align: right
+    line-height: 1.5em
+    ul
+      li
+        &:last-child
+          margin-right: 20px
+  &__checks
+    margin-top: 10px
+    color: $text-color
+    display: flex
+    flex-wrap: wrap
+    font-size: 12px
+    line-height: 1.5em
+  &__check
+    display: flex
+    align-items: center
+    &:nth-child(odd)
+      flex-basis: 50%
+      flex-shrink: 0
+      margin-right: 15px
+    i
+      margin-right: 5px
+  &__cat-content
+    display: grid
+    grid-column-gap: 8px
+    grid-row-gap: 8px
+    grid-template-rows: repeat(2, 92px)
+    grid-template-columns: repeat(2, 92px)
+    grid-template-areas: "catalog-one__cat_1 catalog-one__cat_2 catalog-one__cat_3" "catalog-one__cat_4 catalog-one__cat-all catalog-one__cat-all"
+  &__cat
+    border: 1px solid #D8E7F6
+    a
+      display: block
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      &:before
+        opacity: 0
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: #000
+        transition: all 0.3s ease
+      &:hover:before
+        opacity: 0.05
+    img
+      max-width: 100%
+  &__cat-all
+    background: #F2F8FE
+    border: 1px solid #D8E7F6
+    padding: 20px 15px
+    display: flex
+    justify-content: space-between
+    &-left
+    &-right
+      display: flex
+      align-items: center
+      justify-content: end
+    &-title
+      font-family: $font-ms
+      font-size: 1.4rem
+      font-weight: 900
+      max-width: 110px
+      a
+        color: #000
+    &-read
+      font-size: 1.2rem
+      color: #008ED4
+    &-link
+      display: block
+      width: 48px
+      height: 48px
+      svg
+        fill: #AAD6FE
+        width: 100%
+        transition: all 0.3s ease
+        &:hover
+          fill: darken(#AAD6FE, 10%)
+
+  &__info-messages
+    width: 48px
+    height: 48px
+    margin-right: 15px
+    img
+      width: 100%
+  &__riad
+    position: absolute
+    bottom: 15px
+    right: 15px
+
+.catalogs-one__cat_1
+  grid-area: catalog-one__cat_1
+
+.catalogs-one__cat_2
+  grid-area: catalog-one__cat_2
+
+.catalogs-one__cat_3
+  grid-area: catalog-one__cat_3
+
+.catalogs-one__cat_4
+  grid-area: catalog-one__cat_4
+
+.catalogs-one__cat-all
+  grid-area: catalog-one__cat-all
+
+@media (max-width: 1340.999px)
+    .catalogs
+      .switching
+        &_line
+            .catalogs-one
+                &__right
+                    padding-left: 12px
+
+        &_block
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 15px
+
+@media (max-width: 768.999px)
+  .catalogs
+    .switching
+      &_block
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        grid-gap: 15px
+
+@media (max-width: 500.999px)
+  .catalogs
+    .switching
+      &_block
+        .catalogs-one
+          max-width: 100%
+          width: 100%
+          &__img-content
+            max-width: 100%
+          &__img-box
+            width: auto
+            height: auto
+
+@media (max-width: 360.999px)
+  .catalogs
+    .switching
+      &_block
+        .catalogs-one
+          max-width: 350px
+          width: 100%
+          height: 100%
+          &__img-content
+            max-width: 320px
+            height: 216px
+          &__img-box
+            width: 100%
+            height: 100%
+
+
+.catalogs-alone 
+  .catalog-one
+    overflow: hidden
+    background: #fff
+    transition: all 0.3s ease
+    .my-mark
+      transition: all 0.3s ease
+    &-slider-img
+      &__riad
+        display: none
+
+.catalogs-alone
+  .switching
+    &_line
+      .catalog-one
+        margin-bottom: 16px
+        display: flex
+        justify-content: space-between
+        &:last-child
+          margin-bottom: 0
+        &:hover
+          box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.25)
+        &__left
+          padding: 16px 10px 16px 16px
+          display: flex
+          flex-basis: 100%
+        &__right
+          transition: all 0.3s ease
+          background: #F6FBFF
+          flex-basis: 223px
+          flex-shrink: 0
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+        &__center
+          transition: all 0.3s ease
+          padding-left: 26px
+          width: 100%
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+        &__head
+          display: flex
+          justify-content: space-between
+        &__title
+          font-size: 1.4rem
+          color: #000
+          font-family: $font-ms
+          font-weight: 500
+          a
+            color: #000
+        &__articel,
+        &__more,
+        &__booked
+          margin-left: 40px
+        &__info
+          margin-top: 2px
+          font-size: 12px
+        &__article
+          color: #702521
+        &__more
+          color: #008ED4
+        &__booked
+          color: #E32CB1
+          img
+            width: 16px
+            height: 16px
+            margin-right: 10px
+        &__text
+          margin-top: 12px
+          font-size: 1.4rem
+          a
+            display: inline-block
+        &__sizes
+          margin-top: 14px
+        &__colors
+          margin-top: 20px
+        &__price
+          margin-top: 28px
+          font-size: 16px
+          font-weight: 700
+          display: flex
+          justify-content: space-around
+          flex-wrap: wrap
+          &_act
+            margin-right: 5px
+          &_old
+            color: #D5C8C0
+            text-decoration: line-through
+        &__buy-box
+          display: flex
+          flex-direction: column
+          align-items: center
+        &__buy
+          margin-top: 15px
+        &__buttons
+          margin-top: 15px
+          ul
+            display: flex
+            justify-content: center
+            align-items: center
+            li
+              margin-right: 8px
+              &:last-child
+                margin-right: 0
+
+
+      .catalog-one-slider
+        width: 200px
+        height: 170px
+        display: flex
+        justify-content: space-between
+        flex-shrink: 0
+        &-img
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          &__list
+            width: 140px
+            height: 140px
+          &__img
+            width: 140px
+            height: 140px
+          &__dots
+            ul
+              margin-top: 6px
+              height: 20px
+              width: 100%
+              background: #F2F2F2
+              display: flex
+              justify-content: center
+              align-items: center
+              li
+                margin-right: 5px
+                &:last-child
+                  margin-right: 0
+            button
+              background: #C4C4C4
+              height: 10px
+              width: 10px
+              font-size: 1px
+              color: transparent
+              border: none
+              border-radius: 100px
+              display: block
+          .slick-active
+            button
+              background: #000
+        &-thumb
+          width: 50px
+          &__item
+            margin-bottom: 4px
+          &__img
+            width: 50px
+            height: 50px
+            border: 1px solid #F2F2F2
+
+/* Карточки на странице одного конкретного каталога */     
+.catalogs-alone
+  .switching
+    &_block
+      display: grid
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+      grid-gap: 15px
+      .catalog-one
+        padding: 9px
+        position: relative
+        .my-mark
+          position: absolute
+          top: 20px
+          right: 9px
+        &__info,
+        &__text,
+        &__sizes,
+        &__colors,
+        &__reviews
+          display: none
+        &__price
+          margin-top: 5px
+          font-size: 16px
+          font-weight: 700
+          display: flex
+          justify-content: space-between
+          flex-wrap: wrap
+          &_act
+            margin-right: 5px
+          &_old
+            color: #D5C8C0
+            text-decoration: line-through
+        &__right
+          display: flex
+          flex-direction: column
+        &__title
+          margin-top: 5px
+          font-size: 1.4rem
+          color: #000
+          a
+            color: #000
+        &__buy-box
+          margin-top: 10px
+          display: flex
+          justify-content: space-between
+          align-items: center
+        &__buy
+          order: 2
+        &__buttons
+          order: 1
+          ul
+            display: flex
+            li
+              margin-right: 5px
+              &:last-child
+                margin-right: 0
+
+        .catalog-one-slider
+          &-img
+            position: relative
+            &__list
+              width: 140px
+              height: 140px
+              margin: 0 auto
+            &__img
+              width: 140px
+              height: 140px
+            &__dots
+              position: absolute
+              top: 0
+              left: 0
+              ul
+                display: flex
+                flex-direction: column
+                li
+                  margin-bottom: 5px
+                  &:last-child
+                    margin-bottom: 0
+                  button
+                    background: #C4C4C4
+                    height: 10px
+                    width: 10px
+                    font-size: 1px
+                    color: transparent
+                    border: none
+                    border-radius: 100px
+                    display: block
+                .slick-active
+                  button
+                    background: #000
+
+
+        &-slider-thumb
+          display: none
+
+@media (max-width: 1340.999px)
+  .catalog-one
+    &__right
+      flex-basis: 150px
+
+@media (max-width: 768.999px)
+  .catalogs-alone
+    .switching
+      &_block
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 15px
+        justify-content: center
+
+        .catalog-one
+          padding: 7px 0 10px
+          &__center
+            padding: 0 3px
+          &__title
+            text-align: center
+          &-slider
+            &-img
+              width: 140px
+              height: 140px
+              margin: 0 auto
+              &__dots
+                position: absolute
+                top: auto !important
+                bottom: 4px
+                left: 5px !important
+              &__riad
+                display: block
+                position: absolute
+                bottom: 4px
+                right: 4px
+                cursor: pointer
+                img
+                  display: block
+                  height: 16px
+                  width: 16px
+
+          &__price
+            display: flex
+            justify-content: center
+            align-items: center
+            &_old
+              font-size: 12px
+          &__buy-box
+            display: flex
+            align-items: center
+            justify-content: center
+          &__buttons
+            ul
+              li
+                &:last-child
+                  display: none

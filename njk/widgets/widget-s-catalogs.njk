@@ -1,0 +1,28 @@
+{% macro widget_s_catalogs(title) %}
+  {% from "./components/search-form.njk" import search_form %}
+
+  <div class="widget widget-s_catalogs">
+    <div class="widget__title">
+      {{ title }}
+    </div>
+    <div class="widget__body">
+      <div class="widget-s_catalogs__item">
+        {{ search_form('Название', 'fa fa-search') }}
+      </div>
+      <div class="widget-s_catalogs__item">
+        {{ search_form('Артикул', 'fa fa-search') }}
+      </div>
+      <div class="widget-s_catalogs__item">
+        {{ search_form('Столбец/название', 'fa fa-search') }}
+      </div>
+      <div class="widget-s_catalogs__item">
+        {{ search_form('Столбец/название', 'fa fa-search') }}
+      </div>
+      <div class="widget-s_catalogs__item">
+        {{ search_form('Столбец/название', 'fa fa-search') }}
+      </div>
+    </div>
+
+  </div>
+  
+{% endmacro %}

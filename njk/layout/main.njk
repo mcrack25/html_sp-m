@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+  {% include "../parts/head.njk" %}
+  <body>
+    <div class="wrapper">
+      <!-- header -->
+      {% include "../parts/header.njk" %}
+
+      <!-- Контентная часть сайта -->
+      {% block content %}{% endblock %}
+
+      <!-- footer -->
+      {% include "../parts/footer.njk" %}
+    </div>
+  </body>
+  {% block after_body %}{% endblock %}
+
+  {% include "../parts/mobile-menu.njk" %}
+  {% include "../parts/scripts.njk" %}
+</html>

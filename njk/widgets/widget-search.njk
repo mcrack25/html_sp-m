@@ -1,0 +1,13 @@
+{% macro widget_search(title) %}
+    <div class="widget widget-search">
+      <div class="widget__title">{{ title }}</div>
+      <div class="widget__body">
+        <form action="" class="widget-search__form">
+          <input type="text">
+          <button type="sumbit">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+{% endmacro %}

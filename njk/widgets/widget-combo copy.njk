@@ -1,0 +1,80 @@
+{% macro widget_products() %}
+  {% from "./components/checkboxes.njk" import checkboxes %}
+  {% from "./widget-filter-cat.njk" import widget_filter_cat %}
+
+  <div class="widget widget-products">
+    <div class="widget__title">Поиск по каталогу Модный трикотаж</div>
+    <div class="widget__body">
+      
+      <div class="widget__sub-widget">
+
+        <div class="widget-products__checkboxes">
+          <div class="widget__sub-body">
+            <ul>
+              <li>{{ checkboxes('type', 'Популярные', 1 ) }}</li>
+              <li>{{ checkboxes('type', 'Новинки', 2 ) }}</li>
+              <li>{{ checkboxes('type', 'Товары со скидкой', 3 ) }}</li>
+              <li>{{ checkboxes('type', 'В наличии', 4 ) }}</li>
+              <li>{{ checkboxes('type', 'Товары с отзывами', 5 ) }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      
+      {{ widget_filter_cat() }}
+
+      <hr>
+
+      <div class="widget__sub-widget">
+        <div class="widget-products__filter">
+          <div class="widget__sub-title">Фильтр по категориям</div>
+          <div class="widget__sub-body">
+
+            <div class="input-group input-block input-block_blue">
+              <input type="text" class="form-control input-block__input">
+              <div class="input-group-prepend">
+                <button class="input-block__button">
+                  <i class="fa fa-filter" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="widget__sub-widget">
+        <div class="widget-products__prices">
+          <div class="widget__sub-title">Цена</div>
+          <div class="widget__sub-body">
+
+      
+          </div>
+        </div>
+      </div>
+
+      <div class="widget__sub-widget">
+        <div class="widget-products__filter">
+          <div class="widget__sub-title">Искать в каталоге</div>
+          <div class="widget__sub-body">
+
+            <div class="input-group input-block">
+              <input type="text" class="form-control input-block__input">
+              <div class="input-group-prepend">
+                <button class="input-block__button">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+{% endmacro %}

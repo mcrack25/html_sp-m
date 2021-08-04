@@ -1,0 +1,127 @@
+@import "_fonts.scss";
+@import "_base";
+@import "_components";
+@import "_icons";
+@import "_cards";
+@import "_widgets";
+@import "_p-catalogs";
+@import "_p-catalog";
+
+.header
+  position: relative
+  z-index: 10
+  &__pc, &__mob
+    background: #fff
+    padding: 0px 15px
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.29)
+  &__top
+    padding: 8px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid #cfdfed
+    padding-bottom: 8px
+    .search-form
+      flex-basis: 40%
+  &__bottom
+    padding: 6px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__block
+    display: flex
+    align-items: center
+
+  .menu-btn
+    margin-left: 40px
+
+  .basket-btn
+    margin-right: 30px
+
+.goods
+  margin-top: 30px
+
+
+.header-mob
+  &__box
+    display: flex
+  &__top
+    padding: 8px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__bottom
+    padding: 8px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__search
+    padding: 8px 0
+  .logo
+    &__img-box
+      width: 55px
+    &__title
+      font-size: 1.8rem
+    &__desc
+      font-size: 1.2rem
+  .basket-btn
+    display: inline-block
+    &__text
+      margin-right: 0
+  .user-box
+    &__img-box
+      height: 26px
+      width: 26px
+
+
+.footer
+  margin-top: 180px
+  background: #e5f1ff
+  box-shadow: 0 0 16px #ccc
+  .copy
+    margin-left: 76px
+  &__top
+    padding: 40px 0 10px
+  &__bottom
+    padding: 10px 0 30px
+  .support-info
+    margin-top: 10px
+
+/* Внутренние страницы */
+
+
+
+.page-content
+  margin-top: 15px
+
+.p-pages
+  &__head
+    margin-top: 12px
+    &-in
+      margin-left: 20px
+  &__title
+    margin-top: 14px
+    font-size: 2.4rem
+  &__title_two
+    margin-bottom: 20px
+    font-size: 2.4rem
+
+.sidebar
+  max-width: 200px
+  &__box
+    margin-bottom: 30px
+  .widget
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+
+
+.imagefill
+  img
+    display: block
+
+.paginator-wrapper
+  margin-top: 10px
+  display: flex
+  justify-content: space-between
+  align-items: center

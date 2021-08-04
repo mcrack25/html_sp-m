@@ -1,0 +1,85 @@
+{% macro widget_checkboxes(title, visible_list, hidden_list, type, number_widget=1, title_more='Показать ещё', more_position='left', object=false) %}
+  {# 
+    1 - Заголовок
+    2 - Видимый список
+    3 - Скрытый список
+    4 - Название типа
+    5 - Если несколько одинаковых виджетов, нумеровать каждый
+    6 - Текст в кнопке Показать ещё
+    7 - Расположить слева или справа
+  #}
+
+  {% set index = 0 %}
+  
+  <div class="widget widget-checkboxes">
+    <div class="widget__title">{{ title }}</div>
+    <div class="widget__body">
+      <ul class="widget__checkboxes">
+
+        {% for name in visible_list %}
+          {% set index = index + 1 %}
+
+            {% if (object == false) %}
+              <li>
+                <div class="checkbox">
+                  <input type="checkbox" name="{{ type }}" id="widget_{{ type }}_{{ number_widget }}_{{ index }}" class="check">
+                  <label for="widget_{{ type }}_{{ number_widget }}_{{ index }}" class="label">{{ name }}</label>
+                </div>
+              </li>
+            {% elseif (object == true) %}
+              <li>
+                <div class="checkbox">
+                  <input type="checkbox" name="{{ type }}" id="widget_{{ type }}_{{ number_widget }}_{{ index }}" class="check">
+                  <label for="widget_{{ type }}_{{ number_widget }}_{{ index }}" class="label">
+                    <span class="checkbox__round checkbox__round_{{ name.color }}"></span> {{ name.title }}
+                  </label>
+                </div>
+              </li>
+            {% endif %}
+
+        {% endfor %}
+
+        {% if (hidden_list) %}
+          <li>
+            <ul class="collapse" id="collapse_{{ number_widget }}">
+              {% for name in hidden_list %}
+                {% set index = index + 1 %}
+
+                {% if (object == false) %}
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" name="{{ type }}" id="widget_{{ type }}_{{ number_widget }}_{{ index }}" class="check">
+                      <label for="widget_{{ type }}_{{ number_widget }}_{{ index }}" class="label">{{ name }}</label>
+                    </div>
+                  </li>
+                {% elseif (object == true) %}
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" name="{{ type }}" id="widget_{{ type }}_{{ number_widget }}_{{ index }}" class="check">
+                      <label for="widget_{{ type }}_{{ number_widget }}_{{ index }}" class="label"> 
+                        <span class="checkbox__round checkbox__round_{{ name.color }}"></span> {{ name.title }}
+                      </label>
+                    </div>
+                  </li>
+                {% endif %}
+
+              {% endfor %}
+            </ul>
+
+            {% if (more_position == 'left') %}
+              <a href="#" data-toggle="collapse" data-target="#collapse_{{ number_widget }}" aria-expanded="false" aria-controls="collapse_{{ number_widget }}" class="collapse_list">
+                {{ title_more }}
+              </a>
+            {% elseif (more_position == 'right') %}
+              <a href="#" data-toggle="collapse" data-target="#collapse_{{ number_widget }}" aria-expanded="false" aria-controls="collapse_{{ number_widget }}" class="collapse_list collapse_list_right">
+                {{ title_more }}
+              </a>
+            {% endif %}
+
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+
+{% endmacro %}
